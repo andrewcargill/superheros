@@ -2,6 +2,10 @@ import styles from "./App.module.css";
 import NavBar from "./components/NavBar";
 import { Container } from "react-bootstrap";
 import { Route, Switch} from 'react-router-dom'
+import "./api/axiosDefaults";
+import SignUpForm from "./pages/auth/SignupForm";
+
+// Add default route for pages not found
 
 function App() {
   return (
@@ -11,7 +15,7 @@ function App() {
         <Switch>
           <Route exact path = "/" render={()=> <h1>Home page</h1>} />
           <Route exact path = "/signin" render={()=> <h1>Sign In</h1>} />
-          <Route exact path = "/signup" render={()=> <h1>Sign Up</h1>} />
+          <Route exact path = "/signup" render={()=> <SignUpForm />} />
         </Switch>
 
       </Container>
