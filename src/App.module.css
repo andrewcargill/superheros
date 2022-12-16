@@ -1,0 +1,15 @@
+.App {
+    font-family: grenadine-mvb, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: black;
+    background-color: #EBE83D;
+    min-height: 100vh;
+}
+
+.info-text {
+    font-family: grenadine-mvb, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: black;
+}
