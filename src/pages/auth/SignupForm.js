@@ -45,10 +45,10 @@ const SignUpForm = () => {
 
           <Form onSubmit={handleSubmit}>
             <Form.Group controlId="username">
-              <Form.Label className="d-none">username</Form.Label>
+              <Form.Label className="d-none">Hero Name</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="Username"
+                placeholder="Hero Name"
                 name="username"
                 value={username}
                 onChange={handleChange}
