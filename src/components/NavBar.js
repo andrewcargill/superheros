@@ -25,6 +25,9 @@ const NavBar = () => {
             <NavLink to="signup" className={styles.nav}>
               Sign up
             </NavLink>
+            <NavLink to="template" className={styles.nav}>
+              Template
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>

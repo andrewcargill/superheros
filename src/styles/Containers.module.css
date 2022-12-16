@@ -1,0 +1,111 @@
+.InnerContainer {
+  width: 80%;
+}
+.RoundedBorder {
+  border: 20px;
+}
+
+.post-container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.profile-container {
+  width: 80%;
+}
+
+.content-container-white-border {
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.content-container-yellow-border {
+  border-style: solid;
+  border-width: 10px;
+  border-color: #EBE83D;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.content-container-black-border {
+  border-style: solid;
+  border-color: white;
+  border-width: 5px;
+  border-radius: 20px;
+  background-color: black;
+}
+
+.ContentToneBorder {
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 20px;
+  background-color: #F9F9F9;
+}
+
+.content-container-white-thin-border {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.picture-container {
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 10px 10px 0px 0px;
+  background-color: white;
+  width: 563px;
+}
+
+.content-container-tone {
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 10px;
+  background-color: #eff1f3;
+  max-width: 563px;
+}
+
+
+.content-container-tone-no-border {
+  border-radius: 20px;
+  background-color: #F9F9F9;
+  margin-top: 20px;
+}
+
+
+.side-content-container {
+  
+  border-radius: 10px;
+  border: solid;
+  background-color: white;
+  margin-top: 20px;
+  height: 400px;
+  border-width: 5px;
+  
+}
+
+.side-content-container div {
+  padding-top: 15px;
+}
+
+.post-header {
+  border-width: 5px;
+  border-radius: 10px;
+  max-width: 563px;
+}
+
+/* Testing */
+.Yellow {
+  background-color: #EBE83D;
+}
+.Green {
+  background-color: green;
+}
+.Pink {
+  background-color: pink;
+}
+.Blue {
+  background-color: blue;
+}
