@@ -5,24 +5,25 @@ import { Route, Switch} from 'react-router-dom'
 import "./api/axiosDefaults";
 import SignUpForm from "./pages/auth/SignupForm";
 import Template from "./pages/Template";
+import SignInForm from "./pages/auth/SignInForm";
+import LandingPage from "./pages/LandingPage";
 
-
-// Add default route for pages not found
 
 function App() {
-  return (
-    <div className={styles.App}>
-      <NavBar />
-      <Container className={styles.Main}>
-        <Switch>
-          <Route exact path = "/" render={()=> <h1>Home page</h1>} />
-          <Route exact path = "/signin" render={()=> <h1>Sign In</h1>} />
-          <Route exact path = "/signup" render={()=> <SignUpForm />} />
-          <Route exact path = "/template" render={()=> <Template/>} />
-        </Switch>
 
-      </Container>
-    </div>
+  return (
+        <div className={styles.App}>
+          <NavBar />
+          <Container className={styles.Main}>
+            <Switch>
+              <Route exact path="/" render={() => <LandingPage />} />
+              <Route exact path="/signin" render={() => <SignInForm />} />
+              <Route exact path="/signup" render={() => <SignUpForm />} />
+              <Route exact path="/template" render={() => <Template />} />
+              <Route render={() => <p>Page not found!</p>} />
+            </Switch>
+          </Container>
+        </div>
   );
 }
 
