@@ -1,14 +1,27 @@
-import React from 'react'
-import logo from '../assets/logo.png'
+import React from "react";
+import logo from "../assets/logo.png";
+import { useCurrentUser } from "../contexts/CurrentUserContext";
 
 const LandingPage = () => {
+  const currentUser = useCurrentUser();
 
-    return (
-      <div>
+  const loggedOutLanding = (
+    <div>
       <img src={logo} alt="logo" height="100" />
-      </div>
-    )
+    </div>
+  );
 
-}
+  const loggedInLanding = (
+    <div>
+      <h1>Logged in</h1>
+    </div>
+  );
 
-export default LandingPage
+  return (
+    // Shows logo is user is not logged in
+
+    <div>{currentUser ? loggedInLanding : loggedOutLanding}</div>
+  );
+};
+
+export default LandingPage;
