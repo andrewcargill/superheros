@@ -7,6 +7,7 @@ import SignUpForm from "./pages/auth/SignupForm";
 import Template from "./pages/Template";
 import SignInForm from "./pages/auth/SignInForm";
 import LandingPage from "./pages/LandingPage";
+import PostCreateForm from "./components/PostCreateForm";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
               <Route exact path="/signin" render={() => <SignInForm />} />
               <Route exact path="/signup" render={() => <SignUpForm />} />
               <Route exact path="/template" render={() => <Template />} />
+              <Route exact path="/posts/create" render={() => <PostCreateForm />} />
               <Route render={() => <p>Page not found!</p>} />
             </Switch>
           </Container>

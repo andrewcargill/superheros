@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../assets/logo.png";
+import PostCreateForm from "../components/PostCreateForm";
 import { useCurrentUser } from "../contexts/CurrentUserContext";
 
 const LandingPage = () => {
@@ -14,6 +15,7 @@ const LandingPage = () => {
   const loggedInLanding = (
     <div>
       <h1>Logged in</h1>
+      <PostCreateForm />
     </div>
   );
 
