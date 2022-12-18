@@ -8,6 +8,7 @@ import {
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
+import { MoreDropdown } from "../../components/MoreDropdown";
 
 const Post = (props) => {
   const {
@@ -46,7 +47,7 @@ const Post = (props) => {
           {/* is current user the owner? */}
           <Container>
             Is Current User Owner? 
-            {is_owner && postPage && "YES"}</Container>
+            {is_owner && postPage && <MoreDropdown /> }</Container>
         </Container>
      
 
