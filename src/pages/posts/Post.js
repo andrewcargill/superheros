@@ -9,6 +9,8 @@ import {
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { MoreDropdown } from "../../components/MoreDropdown";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { axiosRes } from "../../api/axiosDefaults";
 
 const Post = (props) => {
   const {
@@ -24,6 +26,20 @@ const Post = (props) => {
 
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
+  const history = useHistory();
+
+  const handleEdit = () => {
+    history.push(`/posts/${id}/edit`);
+  };
+
+  const handleDelete = async () => {
+    try {
+      await axiosRes.delete(`/posts/${id}/`);
+      history.goBack();
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
  
@@ -47,7 +63,11 @@ const Post = (props) => {
           {/* is current user the owner? */}
           <Container>
             Is Current User Owner? 
-            {is_owner && postPage && <MoreDropdown /> }</Container>
+            {is_owner && postPage && <MoreDropdown
+             handleEdit={handleEdit} 
+             handleDelete={handleDelete}
+             /> }
+        </Container>
         </Container>
      
 
