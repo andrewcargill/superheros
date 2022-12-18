@@ -9,15 +9,19 @@ import SignInForm from "./pages/auth/SignInForm";
 import LandingPage from "./pages/LandingPage";
 import PostCreateForm from "./components/PostCreateForm";
 import PostPage from "./pages/posts/PostPage";
-
+import PostsPage from "./pages/posts/PostsPage";
+import { useCurrentUser } from "./contexts/CurrentUserContext";
 
 function App() {
+const currentUser = useCurrentUser();
 
   return (
-        <div className={styles.App}>
-          <NavBar />
-          <Container className={styles.Main}>
-            <Switch>
+    <div className={styles.App}>
+      <NavBar />
+      <Container className={styles.Main}>
+        <Switch>
+
+              <Route exact path="/posts" render={() => <PostsPage />} />
               <Route exact path="/" render={() => <LandingPage />} />
               <Route exact path="/signin" render={() => <SignInForm />} />
               <Route exact path="/signup" render={() => <SignUpForm />} />
