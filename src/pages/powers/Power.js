@@ -1,17 +1,15 @@
 import React from "react";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import {
-  Card,
   Media,
   Container,
-  Row,
-  Button,
+  Row
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
-import { MoreDropdown } from "../../components/MoreDropdown";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosRes } from "../../api/axiosDefaults";
+import { EditDropdown } from "../../components/EditDropdown";
 
 const Power = (props) => {
   const {
@@ -31,9 +29,11 @@ const Power = (props) => {
   const is_owner = currentUser?.username === owner;
   const history = useHistory();
   console.log('------------andy Line 28 is_owner', is_owner);
+  console.log('------------andy Line 34 currentUser', currentUser);
+  console.log('------------andy Line 34 currentUser', owner);
   
   const handleEdit = () => {
-    history.push(`/profiles/${id}/edit`);
+    history.push(`/powers/${id}/edit`);
   };
 
   return (
@@ -59,7 +59,7 @@ const Power = (props) => {
           {/* is current user the owner? */}
           <Container>
             Is Current User Owner? 
-            {is_owner && powerPage && <MoreDropdown
+            {is_owner && powerPage && <EditDropdown
              handleEdit={handleEdit} 
              /> }
         </Container>
