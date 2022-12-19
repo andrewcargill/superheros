@@ -46,6 +46,9 @@ const NavBar = () => {
       <NavLink to="template" className={styles.nav}>
         Template
       </NavLink>
+      <NavLink to="profiles/1" className={styles.nav}>
+        Profile
+      </NavLink>
     </>
   );
 
