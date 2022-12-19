@@ -27,7 +27,7 @@ const NavBar = () => {
       <NavLink to="/" className={styles.nav}>
         Home
       </NavLink>
-      <NavLink to="signin" className={styles.nav}>
+      <NavLink to="/signin" className={styles.nav}>
         Create Post
       </NavLink>
       <NavLink className={styles.nav} to="/" onClick={handleSignOut}>
@@ -37,13 +37,13 @@ const NavBar = () => {
   );
   const loggedOutIcons = (
     <>
-      <NavLink to="signin" className={styles.nav}>
+      <NavLink to="/signin" className={styles.nav}>
         Sign in
       </NavLink>
-      <NavLink to="signup" className={styles.nav}>
+      <NavLink to="/signup" className={styles.nav}>
         Sign up
       </NavLink>
-      <NavLink to="template" className={styles.nav}>
+      <NavLink to="/template" className={styles.nav}>
         Template
       </NavLink>
     </>
@@ -62,10 +62,10 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto text-left">
-            <NavLink to="profiles" className={styles.nav}>
+            <NavLink to="/profiles" className={styles.nav}>
               Profiles
             </NavLink>
-            <NavLink to="powers" className={styles.nav}>
+            <NavLink to="/powers" className={styles.nav}>
               Powers
             </NavLink>
 

@@ -2,15 +2,10 @@ import React, { useEffect, useState } from "react";
 
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import Container from "react-bootstrap/Container";
-
-import appStyles from "../../App.module.css";
 import { useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import Power from "./Power";
-import Comment from "../comments/Comment";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import CommentCreateForm from "../comments/CommentCreateForm";
 
 
 function PowerPage() {
@@ -18,7 +13,6 @@ function PowerPage() {
   const [power, setPower] = useState({ results: [] });
 
   const currentUser = useCurrentUser();
-  const profile_image = currentUser?.profile_image;
 
 
 

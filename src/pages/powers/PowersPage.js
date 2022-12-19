@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
-import { Container, Row, Media, Card } from "react-bootstrap";
+import { Container, Row, Media } from "react-bootstrap";
 import Avatar from "../../components/Avatar";
 import { Link } from "react-router-dom";
 
 
 
-function ProfilesPage() {
+function PowersPage() {
   const [posts, setPosts] = useState([]);
 
 
   useEffect(() => {
     async function fetchPosts() {
-      const URL = `/profiles/`;
+      const URL = `/powers/`;
       try {
         const res = await axios.get(URL);
         console.log(res.data);
@@ -30,34 +30,37 @@ function ProfilesPage() {
 
   return (
     <div>
-
-      Hello! 
       <div>
         {posts.map((post) => (
           <Container key={post.id}>
-
-        
             <Row>
               <Media className="align-items-center justify-content-between">
-                <Link to={`/profiles/${post.profile_id}`}>
-                  <Avatar src={post.image} height={55} />
+                <Link to={`/powers/${post.id}`}>
+                  <Avatar src={post.profile_image} height={55} />
                   {post.owner}
                 </Link>
               </Media>
             </Row>
             <Row>
-              <Link to={`/profiles/${post.id}`}>
-                <Card.Img src={post.image} alt="profile image" height={400} />
-              </Link>
+            <Container>
+            <div>Speed: {post.speed}</div>
+            </Container>
+            <Container>
+            <div>flight: {post.flight}</div>
+            </Container>
+            <Container>
+            <div>strength: {post.strength}</div>
+            </Container>
+            <Container>
+            <div>vision: {post.vision}</div>
+            </Container>
+            <Container>
+            <div>fire: {post.fire}</div>
+            </Container>
+            <Container>
+            <div>lasers: {post.lasers}</div>
+            </Container>
             </Row>
-            <div>PROFILE BIO: {post.bio}</div>
-            <div>PROFILE CREATION DATE: {post.created_at}</div>
-            
-            {post.updated_at}
-
-          
-
-
           </Container>
         ))}
       </div>
@@ -65,4 +68,4 @@ function ProfilesPage() {
   );
 }
 
-export default ProfilesPage;
+export default PowersPage;

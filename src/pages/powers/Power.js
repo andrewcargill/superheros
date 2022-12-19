@@ -8,7 +8,6 @@ import {
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import { axiosRes } from "../../api/axiosDefaults";
 import { EditDropdown } from "../../components/EditDropdown";
 
 const Power = (props) => {
@@ -28,9 +27,6 @@ const Power = (props) => {
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
   const history = useHistory();
-  console.log('------------andy Line 28 is_owner', is_owner);
-  console.log('------------andy Line 34 currentUser', currentUser);
-  console.log('------------andy Line 34 currentUser', owner);
   
   const handleEdit = () => {
     history.push(`/powers/${id}/edit`);
