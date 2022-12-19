@@ -4,7 +4,7 @@ import axios from "axios";
 import { Container, Row, Media, Card } from "react-bootstrap";
 import Avatar from "../../components/Avatar";
 import { Link } from "react-router-dom";
-import Asset from "../../components/Asset";
+
 
 
 function ProfilesPage() {
@@ -13,7 +13,7 @@ function ProfilesPage() {
 
   useEffect(() => {
     async function fetchPosts() {
-      const URL = `/posts/`;
+      const URL = `/profiles/`;
       try {
         const res = await axios.get(URL);
         console.log(res.data);
@@ -30,6 +30,8 @@ function ProfilesPage() {
 
   return (
     <div>
+
+      Hello! 
       <div>
         {posts.map((post) => (
           <Container key={post.id}>
@@ -38,17 +40,19 @@ function ProfilesPage() {
             <Row>
               <Media className="align-items-center justify-content-between">
                 <Link to={`/profiles/${post.profile_id}`}>
-                  <Avatar src={post.profile_image} height={55} />
+                  <Avatar src={post.image} height={55} />
                   {post.owner}
                 </Link>
               </Media>
             </Row>
             <Row>
-              <Link to={`/posts/${post.id}`}>
-                <Card.Img src={post.image} alt={post.caption} height={400} />
+              <Link to={`/profiles/${post.id}`}>
+                <Card.Img src={post.image} alt="profile image" height={400} />
               </Link>
             </Row>
-            <div>{post.caption}</div>
+            <div>PROFILE BIO: {post.bio}</div>
+            <div>PROFILE CREATION DATE: {post.created_at}</div>
+            
             {post.updated_at}
 
           

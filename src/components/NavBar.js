@@ -46,9 +46,6 @@ const NavBar = () => {
       <NavLink to="template" className={styles.nav}>
         Template
       </NavLink>
-      <NavLink to="profiles/1" className={styles.nav}>
-        Profile
-      </NavLink>
     </>
   );
 
@@ -65,6 +62,9 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto text-left">
+          <NavLink to="profiles" className={styles.nav}>
+        Profiles
+      </NavLink>
 
             {currentUser ? loggedInIcons : loggedOutIcons}
 
