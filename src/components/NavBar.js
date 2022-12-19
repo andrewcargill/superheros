@@ -62,12 +62,14 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto text-left">
-          <NavLink to="profiles" className={styles.nav}>
-        Profiles
-      </NavLink>
+            <NavLink to="profiles" className={styles.nav}>
+              Profiles
+            </NavLink>
+            <NavLink to="powers" className={styles.nav}>
+              Powers
+            </NavLink>
 
             {currentUser ? loggedInIcons : loggedOutIcons}
-
           </Nav>
         </Navbar.Collapse>
       </Container>
