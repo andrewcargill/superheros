@@ -51,6 +51,17 @@
   background-color: #F9F9F9;
 }
 
+.Padding {
+  padding-top: 20px;
+}
+
+.Padding div {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+
+
 .content-container-white-thin-border {
   border-style: solid;
   border-width: 1px;
@@ -116,3 +127,17 @@
 .Blue {
   background-color: blue;
 }
+
+/*Mobile sizing*/
+@media screen and (max-width: 768px){
+  .Padding {
+    padding-top: 5px;
+  }
+  
+  .Padding div {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+}
+

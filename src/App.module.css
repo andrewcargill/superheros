@@ -14,6 +14,7 @@
 .ComicText {
     font-family: collector-comic, sans-serif;
     font-weight: 400;
+    text-align: center;
     font-style: italic;
 }
 
@@ -28,3 +29,28 @@
     font-style: normal;
     color: #4AF626;
 }
+
+.Input {
+    width: 80%;
+    text-align: center;
+}
+
+/*Resizing for mobile*/
+@media screen and (max-width: 768px) {
+    .App {
+        background-color: pink;
+    }
+
+    .InfoText {
+        font-size: 12px;
+    }
+
+    .ComicText {
+        font-size: medium;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+
+}
+

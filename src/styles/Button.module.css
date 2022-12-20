@@ -9,13 +9,13 @@
   height: 40px;
   padding: 1px, 20px;
   margin: 20px;
-  font-size: smaller;
   color: black;
 }
 
 .ButtonYellow:hover {
   background-color: black;
   color: white;
+  border-color: black;
 }
 
 /* White button*/
@@ -28,13 +28,13 @@
   height: 40px;
   padding: 1px, 20px;
   margin: 20px;
-  font-size: smaller;
   color: black;
 }
 
 .ButtonWhite:hover {
   background-color: black;
   color: white;
+  border-color: #FFFC00;
 }
 
 /*Button sizing*/
@@ -50,43 +50,14 @@
 .MediumButton {
   width: 70%;
 }
-/* 
-.Button {
-  font-size: 0.8rem;
-  align-self: center;
-  border-radius: 100px;
-  border-color: transparent;
-  padding: 4px 10px;
-  margin-left: 2px;
-  margin-right: 2px;
-  min-width: 75px;
+
+.Medium {
+  width: 50%;
 }
 
-.Button:hover {
-  opacity: 0.8;
-  border-color: transparent;
-  cursor: pointer;
+/*Resizing for mobile*/
+@media screen and (max-width: 768px) {
+  .Medium {
+    width: 80%;
+  }
 }
-
-.Button:hover:active {
-  background-color: #2142b2 !important;
-}
-
-.Button:active {
-  background-color: #2142b2 !important;
-}
-
-.Button:focus {
-  background-color: #2142b2;
-}
-
-.Wide {
-  padding: 10px 50px;
-  width: 100%;
-}
-/*   
-.Blue,
-.BlueOutline:hover,
-.Bright:hover {
-  background-color: #2142b2;
-  color: #ffffff; */

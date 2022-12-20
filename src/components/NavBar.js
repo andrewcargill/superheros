@@ -71,6 +71,9 @@ const NavBar = () => {
             <NavLink to="/posts" className={styles.nav}>
               Posts
             </NavLink>
+            <NavLink to="/posts/create" className={styles.nav}>
+              + Post
+            </NavLink>
 
             {currentUser ? loggedInIcons : loggedOutIcons}
           </Nav>

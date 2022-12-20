@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
+import Col from "react-bootstrap/Col";
 import Alert from "react-bootstrap/Alert";
 import Image from "react-bootstrap/Image";
 
@@ -64,82 +65,110 @@ function PostCreateForm() {
     }
   };
 
-  const textFields = (
-    <div className="text-center">
-      <Form.Group>
-        <Form.Label>Caption</Form.Label>
-        <Form.Control
-          type="text"
-          name="caption"
-          value={caption}
-          onChange={handleChange}
-        />
-      </Form.Group>
-      {errors?.caption?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
-
-      <Button
-        className={`${btnStyles.Button} ${btnStyles.Blue}`}
-        onClick={() => history.goBack()}
-      >
-        cancel
-      </Button>
-      <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
-        create
-      </Button>
-    </div>
-  );
 
   return (
     <Form onSubmit={handleSubmit}>
-      <Row>
-        <Container
-          className={`${frame.ContentToneBorder} container-md justify-content-center`}
-        >
-            <h5 className={appStyles.ComicText}>Load up that image and share!!</h5>
-          <Form.Group className="text-center">
-            {image ? (
-              <>
-                <figure>
-                  <Image className={appStyles.Image} src={image} rounded />
-                </figure>
-                <div>
-                  <Form.Label
-                    className={`${btnStyles.Button} ${btnStyles.Blue} btn`}
-                    htmlFor="image-upload"
+      {/* frame = ../styles/Containers.module*/}
+      {/* appStyle = ../App.module*/}
+      {/* btnStyles = ../styles/Button.module.css*/}
+
+      {/* Main Container*/}
+      <Container
+        className={`${frame.Padding} container-md justify-content-center`}
+      >
+        <Row>
+          {/* Main Content Container*/}
+          <Container
+            className={`${frame.ContentToneBorder} container-md justify-content-center text-center`}
+          >
+            <h5 className={appStyles.ComicText}>
+              let's share what's been happening!
+            </h5>
+            <Form.Group className="text-center">
+              {image ? (
+                <>
+                  <figure>
+                    <Image className={appStyles.Image} src={image} rounded />
+                  </figure>
+                  <div>
+                    <Form.Label
+                      className={`${appStyles.InfoText} ${btnStyles.Button} ${btnStyles.Blue} btn`}
+                      htmlFor="image-upload"
+                    >
+                      Change the image
+                    </Form.Label>
+                  </div>
+                </>
+              ) : (
+                <Form.Label
+                  className={`${appStyles.InfoText} d-flex justify-content-center`}
+                  htmlFor="image-upload"
+                >
+                  <Asset
+                    src={Upload}
+                    message="Click or tap to upload an image"
+                  />
+                </Form.Label>
+              )}
+
+              <Form.File
+                className={`${appStyles.InfoText} d-flex text-center`}
+                id="image-upload"
+                accept="image/*"
+                onChange={handleChangeImage}
+                ref={imageInput}
+              />
+            </Form.Group>
+
+            {errors?.image?.map((message, idx) => (
+              <Alert variant="warning" key={idx}>
+                {message}
+              </Alert>
+            ))}
+
+            <Form.Group>
+              <Form.Label className="d-none">Caption</Form.Label>
+
+              <Form.Control
+                type="text"
+                name="caption"
+                className={`${appStyles.InfoText} ${appStyles.Input}`}
+                placeholder="Add the caption..."
+                value={caption}
+                onChange={handleChange}
+              />
+            </Form.Group>
+            {errors?.caption?.map((message, idx) => (
+              <Alert variant="warning" key={idx}>
+                {message}
+              </Alert>
+            ))}
+
+            {/* Two Buttons Layout - Stacks on mobile */}
+            <div className="text-center">
+              {/* Row with 2 columns - 1 col per button*/}
+              <Row xs={1} md={2}>
+                <Col className="col-md-6">
+                  <Button
+                    className={`${appStyles.InfoText} ${btnStyles.ButtonYellow} ${btnStyles.Medium} text-uppercase`}
+                    onClick={() => history.goBack()}
                   >
-                    Change the image
-                  </Form.Label>
-                </div>
-              </>
-            ) : (
-              <Form.Label
-                className="d-flex justify-content-center"
-                htmlFor="image-upload"
-              >
-                <Asset src={Upload} message="Click or tap to upload an image" />
-              </Form.Label>
-            )}
-
-            <Form.File
-              id="image-upload"
-              accept="image/*"
-              onChange={handleChangeImage}
-              ref={imageInput}
-            />
-          </Form.Group>
-          {errors?.image?.map((message, idx) => (
-            <Alert variant="warning" key={idx}>
-              {message}
-            </Alert>
-          ))}
-          <Container className={appStyles.Content}>{textFields}</Container>
-        </Container>
-
-      </Row>
+                    cancel!
+                  </Button>
+                </Col>
+                <Col className="col-md-6">
+                  <Button
+                    className={`${appStyles.InfoText} ${btnStyles.ButtonYellow} ${btnStyles.Medium} text-uppercase`}
+                    type="submit"
+                  >
+                    save it!
+                  </Button>
+                </Col>
+              </Row>
+            </div>
+          </Container>
+        </Row>
+      </Container>
     </Form>
   );
 }
