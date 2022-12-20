@@ -92,11 +92,7 @@ function PostCreateForm() {
                 >
                   <>
                     <figure>
-                      <Image
-                        style={{ backgroundSize: "cover" }}
-                        src={image}
-                        rounded
-                      />
+                      <Image className={appStyles.Image} src={image} rounded />
                     </figure>
                     <div>
                       <Form.Label
@@ -110,20 +106,20 @@ function PostCreateForm() {
                 </Container>
               ) : (
                 <Container
-                className={`${frame.ContainerWhiteThinBorder} container-md justify-content-center text-center`}
-              >
-                <Form.Label
-                  className={`${appStyles.InfoText} d-flex justify-content-center`}
-                  htmlFor="image-upload"
+                  className={`${frame.ContainerWhiteThinBorder} container-md justify-content-center text-center`}
                 >
-                  <Asset
-                    src={Upload}
-                    message="Click or tap to upload an image"
-                  />
-                </Form.Label>
+                  <Form.Label
+                    className={`${appStyles.InfoText} d-flex justify-content-center`}
+                    htmlFor="image-upload"
+                  >
+                    <Asset
+                      src={Upload}
+                      message="Click the hero to upload an image"
+                    />
+                  </Form.Label>
                 </Container>
               )}
-              
+
               <Form.File
                 className={`${appStyles.InfoText} d-flex text-center`}
                 id="image-upload"

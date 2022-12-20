@@ -12,32 +12,27 @@ import Comment from "../comments/Comment";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import CommentCreateForm from "../comments/CommentCreateForm";
 
-
 function PostPage() {
   const { id } = useParams();
   const [post, setPost] = useState({ results: [] });
 
   const currentUser = useCurrentUser();
   const profile_image = currentUser?.profile_image;
-  const [comments, setComments] = useState({results: []});
-
-
+  const [comments, setComments] = useState({ results: [] });
 
   useEffect(() => {
     const handleMount = async () => {
       try {
-        const [{ data: post }, {data: comments }] = await Promise.all([
+        const [{ data: post }, { data: comments }] = await Promise.all([
           axiosReq.get(`/posts/${id}/`),
           axiosReq.get(`/comments/?post=${id}/`),
-
         ]);
         setPost({ results: [post] });
         setComments(comments);
         console.log(post);
-        console.log('comments', comments);
-        console.log('axios test', axiosReq.get(`/comments/7`));
-        console.log('id', {id});
-
+        console.log("comments", comments);
+        console.log("axios test", axiosReq.get(`/comments/7`));
+        console.log("id", { id });
       } catch (err) {
         console.log(err);
       }
@@ -50,7 +45,7 @@ function PostPage() {
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <p>Popular profiles for mobile</p>
-        <Post {...post.results[0]} setPosts={setPost} postPage/>
+        <Post {...post.results[0]} setPosts={setPost} postPage />
         <Container className={appStyles.Content}>
           Comments
           {currentUser ? (
@@ -64,17 +59,21 @@ function PostPage() {
           ) : comments.results.length ? (
             "Comments"
           ) : null}
+          {/* Mapping over returned comments */}
           {comments.results.length ? (
             comments.results.map((comment) => (
-              <Comment key={comment.id} {...comment} />
+              <Comment
+                key={comment.id}
+                {...comment}
+                setComments={setComments}
+              />
             ))
           ) : currentUser ? (
             <span>No comments yet, be the first to comment!</span>
           ) : (
             <span>No comments... yet</span>
           )}
-          
-          </Container>
+        </Container>
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
         Popular profiles for desktop
