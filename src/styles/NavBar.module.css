@@ -1,3 +1,9 @@
 .nav {
     padding: 10px;
+    color: black;
+
+}
+
+.Container {
+    background-color: rgba(255, 252, 0, 0.9);
 }

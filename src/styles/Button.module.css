@@ -1,5 +1,7 @@
-.Button {
-  background-color: #EBE83D;
+
+/* Yellow button*/
+.ButtonYellow {
+  background-color: #FFFC00;
   border-style: solid;
   border-radius: 20px;
   border-width: 2px;
@@ -11,10 +13,31 @@
   color: black;
 }
 
-.Button:active {
+.ButtonYellow:hover {
   background-color: black;
   color: white;
 }
+
+/* White button*/
+.ButtonWhite {
+  background-color: white;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 2px;
+  border-color: black;
+  height: 40px;
+  padding: 1px, 20px;
+  margin: 20px;
+  font-size: smaller;
+  color: black;
+}
+
+.ButtonWhite:hover {
+  background-color: black;
+  color: white;
+}
+
+/*Button sizing*/
 
 .SuperButton {
   width: 100px;

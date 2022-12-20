@@ -3,7 +3,7 @@
     font-weight: 600;
     font-style: normal;
     color: black;
-    background-color: #EBE83D;
+    background-color: #FFFC00;
     min-height: 100vh;
 }
 
@@ -20,4 +20,11 @@
 .ComicTextNormal {
     font-family: collector-comic, sans-serif;
     font-weight: 400;
+}
+
+.Terminal {
+    font-family: courier-std, monospace;
+    font-weight: 400;
+    font-style: normal;
+    color: #4AF626;
 }

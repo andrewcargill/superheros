@@ -51,7 +51,7 @@ const NavBar = () => {
 
   return (
     <Navbar expand="md" fixed="top">
-      <Container>
+      <Container className={styles.Container}>
         {currentUser && (
           <NavLink to="/">
             <Navbar.Brand>
@@ -67,6 +67,9 @@ const NavBar = () => {
             </NavLink>
             <NavLink to="/powers" className={styles.nav}>
               Powers
+            </NavLink>
+            <NavLink to="/posts" className={styles.nav}>
+              Posts
             </NavLink>
 
             {currentUser ? loggedInIcons : loggedOutIcons}
