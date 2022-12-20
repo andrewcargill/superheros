@@ -62,11 +62,12 @@
 
 
 
-.content-container-white-thin-border {
+.ContainerWhiteThinBorder {
   border-style: solid;
   border-width: 1px;
   border-radius: 20px;
   background-color: white;
+  max-width: 50%;
 }
 
 .picture-container {

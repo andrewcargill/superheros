@@ -65,7 +65,6 @@ function PostCreateForm() {
     }
   };
 
-
   return (
     <Form onSubmit={handleSubmit}>
       {/* frame = ../styles/Containers.module*/}
@@ -85,21 +84,34 @@ function PostCreateForm() {
               let's share what's been happening!
             </h5>
             <Form.Group className="text-center">
+              {/* Image Container*/}
+
               {image ? (
-                <>
-                  <figure>
-                    <Image className={appStyles.Image} src={image} rounded />
-                  </figure>
-                  <div>
-                    <Form.Label
-                      className={`${appStyles.InfoText} ${btnStyles.Button} ${btnStyles.Blue} btn`}
-                      htmlFor="image-upload"
-                    >
-                      Change the image
-                    </Form.Label>
-                  </div>
-                </>
+                <Container
+                  className={`${frame.ContainerWhiteThinBorder} container-md justify-content-center text-center`}
+                >
+                  <>
+                    <figure>
+                      <Image
+                        style={{ backgroundSize: "cover" }}
+                        src={image}
+                        rounded
+                      />
+                    </figure>
+                    <div>
+                      <Form.Label
+                        className={`${appStyles.InfoText} ${btnStyles.Button} ${btnStyles.Blue} btn`}
+                        htmlFor="image-upload"
+                      >
+                        Change the image
+                      </Form.Label>
+                    </div>
+                  </>
+                </Container>
               ) : (
+                <Container
+                className={`${frame.ContainerWhiteThinBorder} container-md justify-content-center text-center`}
+              >
                 <Form.Label
                   className={`${appStyles.InfoText} d-flex justify-content-center`}
                   htmlFor="image-upload"
@@ -109,8 +121,9 @@ function PostCreateForm() {
                     message="Click or tap to upload an image"
                   />
                 </Form.Label>
+                </Container>
               )}
-
+              
               <Form.File
                 className={`${appStyles.InfoText} d-flex text-center`}
                 id="image-upload"

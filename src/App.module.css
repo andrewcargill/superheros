@@ -30,6 +30,10 @@
     color: #4AF626;
 }
 
+.ImageUpload {
+    width: 10px;
+}
+
 .Input {
     width: 80%;
     text-align: center;
