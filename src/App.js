@@ -18,6 +18,7 @@ import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import PowerPage from "./pages/powers/PowerPage";
 import PowerEditForm from "./pages/powers/PowerEditForm";
 import PowersPage from "./pages/powers/PowersPage";
+import TestPage from "./pages/LayoutTest";
 
 function App() {
 const currentUser = useCurrentUser();
@@ -29,6 +30,7 @@ const currentUser = useCurrentUser();
         <Switch>
 
               <Route exact path="/posts" render={() => <PostsPage />} />
+              <Route exact path="/test" render={() => <TestPage />} />
               <Route exact path="/" render={() => <LandingPage />} />
               <Route exact path="/signin" render={() => <SignInForm />} />
               <Route exact path="/signup" render={() => <SignUpForm />} />
