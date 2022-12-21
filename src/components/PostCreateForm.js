@@ -73,7 +73,7 @@ function PostCreateForm() {
 
       {/* Main Container*/}
       <Container
-        className={`${frame.Padding} container-md justify-content-center`}
+        className={`container-md justify-content-center`}
       >
         <Row>
           {/* Main Content Container*/}

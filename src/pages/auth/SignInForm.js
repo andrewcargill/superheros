@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Component, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import frame from "../../styles/Containers.module.css";
 import styles from "../../styles/SignInUpForm.module.css";
@@ -43,8 +43,10 @@ const SignInForm = () => {
 
   return (
     <Row>
-      <Container>
-        <Container className={`${frame.ContentToneBorder} container-md`}>
+      {/* Spacing container */}
+      <Container className={frame.SmallComponent}>
+        {/* Content container */}
+        <Container className={`${frame.ContentToneBorder} ${frame.Shadow}container-md`}>
           <h4 className={`${appStyles.ComicText} text-center text-uppercase`}>
             Welcome back... it's time to sign in!
           </h4>

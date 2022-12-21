@@ -49,16 +49,27 @@
   border-width: 5px;
   border-radius: 20px;
   background-color: #F9F9F9;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .Padding {
-  padding-top: 20px;
+  width: 40px;
 }
 
 .Padding div {
   padding-top: 20px;
   padding-bottom: 10px;
 }
+
+.SmallComponent {
+  width: 40vw;
+  margin-top: 15vh;
+}
+
+.FlexHeight {
+  height: 72vh;
+}
+
 
 
 
@@ -151,5 +162,13 @@
     margin: 20px;
   }
 
+  .SmallComponent {
+    width: 100%;
+    background-color: aqua;
+  }
+
+  .FlexHeight {
+    height: 80vh;
+  }
 }
 

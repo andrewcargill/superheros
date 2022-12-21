@@ -15,36 +15,40 @@ const LandingPage = () => {
   const loggedOutLanding = (
     <div className={styles.Styles}>
       <Row>
+
         <Container className="container-md">
-        <Container
-          className={`${frame.ContainerBlackBorder} container-md justify-content-center`}
-        >
-          <div className="text-center">
-          <h5 className={appStyles.Terminal}>
-            World Government Agency - Hero Chat
-          </h5>
-          </div>
-          <Row className="justify-content-center">
-            <div>
-            <img src={logo} alt="logo" height="150" />
+          <Container
+            className={`${frame.ContainerBlackBorder} ${frame.FlexHeight} container-md justify-content-center`}
+          >
+            <div className="text-center">
+              <h5 className={appStyles.Terminal}>
+                World Government Agency - Hero Chat
+              </h5>
             </div>
-          </Row>
-          <Row className="justify-content-center">
-          <div className="text-center">
-          <h5 className={appStyles.Terminal}>
-            A safe place for superheros to socialize
-          </h5>
-          </div>
-          </Row>
-          <Row className="justify-content-center">
-          
-            <div>
-            <Link to="/signin">
-              <Button className={`${btnStyles.ButtonWhite} ${appStyles.Terminal} btn text-uppercase`}>Sign in</Button>
-            </Link>
-            </div>
-          </Row>
-        </Container>
+            <Row className="justify-content-center">
+              <div>
+                <img src={logo} alt="logo" height="150" />
+              </div>
+            </Row>
+            <Row className="justify-content-center">
+              <div className="text-center">
+                <h5 className={appStyles.Terminal}>
+                  A safe place for superheros to socialize
+                </h5>
+              </div>
+            </Row>
+            <Row className="justify-content-center">
+              <div>
+                <Link to="/signin">
+                  <Button
+                    className={`${btnStyles.ButtonWhite} ${appStyles.Terminal} btn text-uppercase`}
+                  >
+                    Sign in
+                  </Button>
+                </Link>
+              </div>
+            </Row>
+          </Container>
         </Container>
       </Row>
     </div>

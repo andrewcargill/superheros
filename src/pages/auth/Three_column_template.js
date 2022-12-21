@@ -46,7 +46,9 @@ const SignInForm = () => {
       <Col className={`${frame.Pink} order-lg-3 col-lg-3`}>SIDE BAR</Col>
       {/*MAIN CONTENT*/}
       <Col className="order-lg-1 col-lg-8">
+        {/*MAIN CONTENT - SUB CONTAINER*/}
         <Container className={`${frame.ContentToneBorder} container-md`}>
+          {/*MAIN CONTENT - BOARDER STYLING*/}
           <h4 className={`${appStyles.ComicText} text-center text-uppercase`}>
             Welcome back... it's time to sign in!
           </h4>
