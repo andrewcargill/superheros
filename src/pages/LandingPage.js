@@ -1,6 +1,5 @@
 import React from "react";
 import logo from "../assets/logo.png";
-import PostCreateForm from "../components/PostCreateForm";
 import { useCurrentUser } from "../contexts/CurrentUserContext";
 import { Container, Row, Button } from "react-bootstrap";
 import btnStyles from "../styles/Button.module.css";
@@ -8,10 +7,11 @@ import { Link } from "react-router-dom";
 import appStyles from "../App.module.css";
 import frame from "../styles/Containers.module.css";
 import styles from "../styles/Landing.module.css";
+import PostsPage from "./posts/PostsPage";
 
 const LandingPage = () => {
   const currentUser = useCurrentUser();
-
+  console.log(currentUser);
   const loggedOutLanding = (
     <div className={styles.Styles}>
       <Row>
@@ -57,8 +57,8 @@ const LandingPage = () => {
   const loggedInLanding = (
     <div>
       <Container>
-        <h1>Logged in</h1>
-        <PostCreateForm />
+        <h1>WELCOME BACK!</h1>
+        <PostsPage />
       </Container>
     </div>
   );

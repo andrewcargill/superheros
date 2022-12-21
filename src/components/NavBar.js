@@ -43,9 +43,6 @@ const NavBar = () => {
       <NavLink to="/" className={styles.nav}>
         Home
       </NavLink>
-      <NavLink to="/signin" className={styles.nav}>
-        Create Post
-      </NavLink>
       <NavLink className={styles.nav} to="/" onClick={handleSignOut}>
         Sign Out
       </NavLink>

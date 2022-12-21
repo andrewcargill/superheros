@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import Asset from "../../components/Asset";
 import frame from "../../styles/Containers.module.css";
 import appStyles from "../../App.module.css";
+import PowersSearch from "../powers/PowersSearch";
 
 function PostsPage() {
   const [posts, setPosts] = useState([]);
@@ -32,7 +33,9 @@ function PostsPage() {
     <div>
       <Row md={1} sm={1} xs={1} lg={3}>
         {/*SIDE CONTENT*/}
-        <Col className={`${frame.Pink} order-lg-3 col-lg-3`}>SIDE BAR</Col>
+        <Col className={`${frame.Black}  ${frame.SideContainer} order-lg-3 col-lg-3`}>
+          <PowersSearch />
+        </Col>
         {/*MAIN CONTENT*/}
         <Col className="order-lg-1 col-lg-8">
           {/*MAIN CONTENT - SUB CONTAINER*/}
@@ -81,7 +84,7 @@ function PostsPage() {
           </Container>
         </Col>
         {/*SPACER CONTENT*/}
-        <Col className={`${frame.Blue} order-lg-2 col-lg-1`}>Spacer column</Col>
+        <Col className="order-lg-2 col-lg-1"></Col>
       </Row>
     </div>
   );

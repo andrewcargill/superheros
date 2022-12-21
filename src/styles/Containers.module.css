@@ -87,6 +87,18 @@
  white-space: nowrap;
 }
 
+.SideContainer {
+  display: flex;
+  height: 50vh;
+  overflow: scroll;
+ white-space: nowrap;
+ border-style: solid;
+ border-color: white;
+  border-width: 5px;
+  border-radius: 20px;
+  padding: 10px;
+}
+
 .WrapText {
   width: 100%;
   overflow-wrap: break-word;
@@ -157,8 +169,8 @@
 .Green {
   background-color: green;
 }
-.Pink {
-  background-color: pink;
+.Black {
+  background-color: black;
 }
 .Blue {
   background-color: blue;
@@ -191,6 +203,12 @@
 
   .FlexHeight {
     height: 80vh;
+  }
+
+  .SideContainer {
+    max-height: 10vh;
+    overflow: scroll;
+   white-space: nowrap;
   }
 }
 
