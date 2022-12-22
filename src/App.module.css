@@ -44,18 +44,14 @@
     object-fit: contain;
 }
 
-
-
 .Input {
     width: 80%;
     text-align: center;
 }
 
+
 /*Resizing for mobile*/
 @media screen and (max-width: 768px) {
-    .App {
-        background-color: pink;
-    }
 
     .InfoText {
         font-size: 12px;

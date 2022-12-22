@@ -3,9 +3,8 @@ import { Link, useHistory } from "react-router-dom";
 import frame from "../../styles/Containers.module.css";
 import styles from "../../styles/SignInUpForm.module.css";
 import appStyles from "../../App.module.css";
-import btnStyles from "../../styles/Button.module.css"
-
-import { Form, Button, Col, Row, Container, Alert } from "react-bootstrap";
+import btnStyles from "../../styles/Button.module.css";
+import { Form, Button, Row, Container, Alert } from "react-bootstrap";
 import axios from "axios";
 import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
 
@@ -46,7 +45,9 @@ const SignInForm = () => {
       {/* Spacing container */}
       <Container className={frame.SmallComponent}>
         {/* Content container */}
-        <Container className={`${frame.ContentToneBorder} ${frame.Shadow}container-md`}>
+        <Container
+          className={`${frame.ContentToneBorder} ${frame.Shadow}container-md`}
+        >
           <h4 className={`${appStyles.ComicText} text-center text-uppercase`}>
             Welcome back... it's time to sign in!
           </h4>
@@ -80,36 +81,35 @@ const SignInForm = () => {
                 onChange={handleChange}
               />
             </Form.Group>
-
             {errors.password1?.map((message, idx) => (
               <Alert key={idx} variant="warning">
                 {message}
               </Alert>
             ))}
-
-            <Button
-              className={`${appStyles.InfoText} ${btnStyles.ButtonYellow} ${btnStyles.Medium} text-uppercase`} 
-              variant="primary" 
-              type="submit"
+            <Row className="justify-content-center">
+              <Button
+                className={`${appStyles.InfoText} ${btnStyles.ButtonYellow} ${btnStyles.Medium} text-uppercase`}
+                variant="primary"
+                type="submit"
               >
-              Sign In
-            </Button>
+                Sign In
+              </Button>
 
-            {errors.non_field_errors?.map((message, idx) => (
-              <Alert key={idx} variant="warning" className="mt-3">
-                {message}
-              </Alert>
-            ))}
+              {errors.non_field_errors?.map((message, idx) => (
+                <Alert key={idx} variant="warning" className="mt-3">
+                  {message}
+                </Alert>
+              ))}
+            </Row>
           </Form>
 
           <Container className={`mt-3 ${appStyles.Content}`}>
-            <Link className={styles.Link} to="/signin">
+            <Link className={styles.Link} to="/signup">
               Already have an account? <span>Sign in here!</span>
             </Link>
           </Container>
         </Container>
-        </Container>
-
+      </Container>
     </Row>
   );
 };

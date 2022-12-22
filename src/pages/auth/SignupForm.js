@@ -3,7 +3,7 @@ import { Link, useHistory } from "react-router-dom";
 import frame from "../../styles/Containers.module.css";
 import styles from "../../styles/SignInUpForm.module.css";
 import appStyles from "../../App.module.css";
-
+import btnStyles from "../../styles/Button.module.css";
 import { Form, Button, Col, Row, Container, Alert } from "react-bootstrap";
 import axios from "axios";
 
@@ -37,12 +37,12 @@ const SignUpForm = () => {
   };
 
   return (
-    <Row md={1} sm={1} xs={1} lg={3}>
-      {/*SIDE CONTENT*/}
-      <Col className={`${frame.Pink} order-lg-3 col-lg-3`}>SIDE BAR</Col>
-      {/*MAIN CONTENT*/}
-      <Col className="order-lg-1 col-lg-8">
-        <Container className={`${frame.ContentToneBorder} container-md`}>
+    <Row>
+      {/*spacing container*/}
+      <Container className={frame.SmallComponent}>
+        <Container
+          className={`${frame.ContentToneBorder} ${frame.Shadow}container-md`}
+        >
           <h4 className={`${appStyles.ComicText} text-center text-uppercase`}>
             are you a superhero? sign up now!!
           </h4>
@@ -97,16 +97,21 @@ const SignUpForm = () => {
                 {message}
               </Alert>
             ))}
+            <Row className="justify-content-center">
+              <Button
+                className={`${appStyles.InfoText} ${btnStyles.ButtonYellow} ${btnStyles.Medium} text-uppercase`}
+                variant="primary"
+                type="submit"
+              >
+                Sign up
+              </Button>
 
-            <Button variant="primary" type="submit">
-              Sign up
-            </Button>
-
-            {errors.non_field_errors?.map((message, idx) => (
-              <Alert key={idx} variant="warning" className="mt-3">
-                {message}
-              </Alert>
-            ))}
+              {errors.non_field_errors?.map((message, idx) => (
+                <Alert key={idx} variant="warning" className="mt-3">
+                  {message}
+                </Alert>
+              ))}
+            </Row>
           </Form>
 
           <Container className={`mt-3 ${appStyles.Content}`}>
@@ -115,10 +120,7 @@ const SignUpForm = () => {
             </Link>
           </Container>
         </Container>
-      </Col>
-
-      {/*SPACER CONTENT*/}
-      <Col className={`${frame.Blue} order-lg-2 col-lg-1`}>Spacer column</Col>
+      </Container>
     </Row>
   );
 };
