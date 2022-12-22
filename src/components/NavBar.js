@@ -50,15 +50,7 @@ const NavBar = () => {
   );
   const loggedOutIcons = (
     <>
-      <NavLink to="/signin" className={styles.nav}>
-        Sign in
-      </NavLink>
-      <NavLink to="/signup" className={styles.nav}>
-        Sign up
-      </NavLink>
-      <NavLink to="/template" className={styles.nav}>
-        Template
-      </NavLink>
+
     </>
   );
 

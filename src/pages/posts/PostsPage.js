@@ -36,7 +36,7 @@ function PostsPage() {
       <Row md={1} sm={1} xs={1} lg={3}>
         {/*SIDE CONTENT*/}
         <Col
-          className={`${frame.Black}  ${frame.SideContainer} order-lg-3 col-lg-3`}
+          className={`${frame.Black}  ${frame.SideContainer} d-none d-xl-block order-lg-3 col-lg-3`}
         >
           <PowersSearch />
         </Col>
