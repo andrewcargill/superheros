@@ -2,35 +2,36 @@ import React, { useEffect, useState } from "react";
 
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import Container from "react-bootstrap/Container";
-
-import appStyles from "../../App.module.css";
 import { useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import Profile from "./Profile";
-import Comment from "../comments/Comment";
+
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import CommentCreateForm from "../comments/CommentCreateForm";
+
 
 
 function ProfilePage() {
   const { id } = useParams();
   const [profile, setProfile] = useState({ results: [] });
+  const [power, setPower] = useState({ results: [] });
 
   const currentUser = useCurrentUser();
-
+  const owner = profile.results[0] && profile.results[0].owner;
+  
 
 
   useEffect(() => {
+    
     const handleMount = async () => {
       try {
-        const [{ data: profile }] = await Promise.all([
+        const [{ data: profile}, {data: power }] = await Promise.all([
           axiosReq.get(`/profiles/${id}/`),
-
+          axiosReq.get(`/powers/?owner={${owner}}`),
         ]);
         setProfile({ results: [profile] });
-        console.log(profile);
-        console.log('id', {id});
+        setPower({ results: [power] });
+        console.log('------------andy Line 33 power', power);
+        
 
       } catch (err) {
         console.log(err);
