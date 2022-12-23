@@ -62,7 +62,7 @@ function PowerEditForm() {
     
     try {
       await axiosReq.put(`/powers/${id}`, formData);
-      history.push(`/powers/${id}`);
+      history.push(`/profiles/${id}`);
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {
