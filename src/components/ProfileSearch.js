@@ -1,70 +1,61 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
-import axios from "axios";
-import { Container, Row, Media, Card } from "react-bootstrap";
-import Avatar from "../components/Avatar";
+import { Container, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { axiosReq } from "../api/axiosDefaults";
+import { useLocation } from "react-router";
 
-
-
-function ProfileSearch() {
+function ProfileSearch({ filter = "" }) {
   const [profiles, setProfiles] = useState([]);
-
+  const [query, setQuery] = useState("");
+  const [hasLoaded, setHasLoaded] = useState(false);
+  const { pathname } = useLocation();
 
   useEffect(() => {
-    async function fetchPosts() {
-      const URL = `/profiles/`;
+    const fetchProfiles = async () => {
       try {
-        const res = await axios.get(URL);
-        console.log('data', res.data);
-        setProfiles(res.data);
-        
-        
-        
-      } catch (error) {
-        console.log(error);
+        const { data } = await axiosReq.get(
+          `/profiles/?${filter}search=${query}`
+        );
+        setProfiles(data);
+        setHasLoaded(true);
+      } catch (err) {
+        console.log(err);
       }
-    }
-    
-    fetchPosts();
+    };
 
-  }, 
-  []);
+    setHasLoaded(false);
+    const timer = setTimeout(() => {
+      fetchProfiles();
+    }, 1000);
 
-  if (!profiles.length) return <h3>Loading...</h3>;
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [filter, query, pathname]);
 
   return (
     <div>
+      <Form onSubmit={(event) => event.preventDefault()}>
+        <Form.Control
+          value={query}
+          onChange={(event) => setQuery(event.target.value)}
+          type="text"
+          className="mr-sm-2"
+          placeholder="Hero Search"
+        />
+      </Form>
 
-      Hello! 
       <div>
-        {profiles.map((post) => (
-          <Container key={post.id}>
-
-        
-            <Row>
-              <Media className="align-items-center justify-content-between">
-                <Link to={`/profiles/${post.profile_id}`}>
-                  <Avatar src={post.image} height={55} />
-                  {post.owner}
-                </Link>
-              </Media>
-            </Row>
-            <Row>
-              <Link to={`/profiles/${post.id}`}>
-                <Card.Img src={post.image} alt="profile image" height={400} />
-              </Link>
-            </Row>
-            <div>PROFILE BIO: {post.bio}</div>
-            <div>PROFILE CREATION DATE: {post.created_at}</div>
-            
-            {post.updated_at}
-
-          
-
-
-          </Container>
-        ))}
+        {hasLoaded ? (
+          profiles.results.map((profile) => (
+            <Container key={profile.id}>
+              <Link to={`/profiles/${profile.id}`}>{profile.owner}</Link>
+            </Container>
+          ))
+        ) : (
+          <div>LOADING</div>
+        )}
       </div>
     </div>
   );
