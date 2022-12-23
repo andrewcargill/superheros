@@ -53,7 +53,8 @@ function PostCreateForm() {
 
     formData.append("caption", caption);
     formData.append("image", imageInput.current.files[0]);
-
+    console.log('------------andy Line 56 formData', formData.entries()[0]);
+    
     try {
       const { data } = await axiosReq.post("/posts/", formData);
       history.push(`/posts/${data.id}`);

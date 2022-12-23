@@ -10,6 +10,7 @@ import appStyles from "../../App.module.css";
 import PowersSearch from "../powers/PowersSearch";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
+import ProfileSearch from "../../components/ProfileSearch";
 
 function PostsPage() {
   const [posts, setPosts] = useState({ results: [] });
@@ -36,9 +37,9 @@ function PostsPage() {
       <Row md={1} sm={1} xs={1} lg={3}>
         {/*SIDE CONTENT*/}
         <Col
-          className={`${frame.Black}  ${frame.SideContainer} d-none d-xl-block order-lg-3 col-lg-3`}
+          className={`${frame.Black_}  ${frame.SideContainer} d-none d-xl-block order-lg-3 col-lg-3`}
         >
-          <PowersSearch />
+          <ProfileSearch/>
         </Col>
         {/*MAIN CONTENT*/}
         <Col className="order-lg-1 col-lg-8">

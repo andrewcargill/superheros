@@ -71,6 +71,7 @@ function PostEditForm() {
     formData.append("caption", caption);
     
     if (imageInput?.current?.files[0]) {
+      console.log('------------andy Line 74 ', imageInput.current.files[0] );
         formData.append("image", imageInput.current.files[0]);
       }
     

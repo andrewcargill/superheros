@@ -17,17 +17,16 @@ const NavBar = () => {
   const ref = useRef(null);
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (ref.current && !ref.current.contains(event.target)){
-        setExpanded(false) 
+      if (ref.current && !ref.current.contains(event.target)) {
+        setExpanded(false);
       }
-    }
+    };
 
-    document.addEventListener('mouseup', handleClickOutside)
+    document.addEventListener("mouseup", handleClickOutside);
     return () => {
-      document.removeEventListener('mouseup', handleClickOutside)
-    }
-  }, [ref] )
-
+      document.removeEventListener("mouseup", handleClickOutside);
+    };
+  }, [ref]);
 
   const handleSignOut = async () => {
     try {
@@ -43,16 +42,23 @@ const NavBar = () => {
       <NavLink to="/" className={styles.nav}>
         Home
       </NavLink>
+      <NavLink 
+      to={`/profiles/${currentUser?.profile_id}`} 
+      className={styles.nav}>
+        Profile
+      </NavLink>
+      <NavLink
+        to="/posts/create"
+        className={styles.nav}
+      >
+        + Post
+      </NavLink>
       <NavLink className={styles.nav} to="/" onClick={handleSignOut}>
         Sign Out
       </NavLink>
     </>
   );
-  const loggedOutIcons = (
-    <>
-
-    </>
-  );
+  const loggedOutIcons = <></>;
 
   return (
     <Navbar expanded={expanded} expand="md" fixed="top">
@@ -71,19 +77,6 @@ const NavBar = () => {
         />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto text-left">
-            <NavLink to="/profiles" className={styles.nav}>
-              Profiles
-            </NavLink>
-            <NavLink to="/powers" className={styles.nav}>
-              Powers
-            </NavLink>
-            <NavLink to="/posts" className={styles.nav}>
-              Posts
-            </NavLink>
-            <NavLink to="/posts/create" className={styles.nav}>
-              + Post
-            </NavLink>
-
             {currentUser ? loggedInIcons : loggedOutIcons}
           </Nav>
         </Navbar.Collapse>

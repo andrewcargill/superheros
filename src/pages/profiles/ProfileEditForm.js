@@ -55,12 +55,16 @@ function ProfileEditForm() {
 
   const handleChangeImage = (event) => {
     if (event.target.files.length) {
+      console.log('------------andy Line 58 ', event.target.files.length);
+      
       URL.revokeObjectURL(image);
       setPostData({
         ...postData,
         image: URL.createObjectURL(event.target.files[0]),
       });
     }
+    console.log('------------andy Line 66 ', );
+    
   };
 
   const handleSubmit = async (event) => {
