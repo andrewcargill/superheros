@@ -1,14 +1,10 @@
 import React, { useEffect, useState } from "react";
-
-import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import { useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import Profile from "./Profile";
 import Power from "../powers/PowerPage";
-// import Power from "../powers/Power";
-
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import frame from "../../styles/Containers.module.css";
 import { Container } from "react-bootstrap";
 
 function ProfilePage() {
@@ -36,8 +32,8 @@ function ProfilePage() {
   }, [id]);
 
   return (
-    <Row className="h-100">
-      <Container className="container-md">
+    <Row>
+      <Container className={frame.SingleComponent}>
         <Row>
           <Profile
             {...profile.results[0]}

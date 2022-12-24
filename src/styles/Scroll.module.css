@@ -1,0 +1,5 @@
+.ResultsScroll {
+    height: 80vh;
+    overflow: scroll;
+   white-space: nowrap;
+  }

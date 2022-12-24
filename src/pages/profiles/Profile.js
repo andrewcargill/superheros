@@ -1,6 +1,6 @@
 import React from "react";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { Card, Media, Container, Row, Button } from "react-bootstrap";
+import { Card, Container, Row } from "react-bootstrap";
 
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
@@ -37,11 +37,13 @@ const Profile = (props) => {
         <p className={appStyles.ComicText}> {bio}</p>
       </div>
       <div>
-        <p className="text-center"> A Member since: {created_at} </p>
+        <p className="text-center text-uppercase"> joined  {created_at} </p>
       </div>
       {/* is current user the owner? */}
       <Container>
+        <Row>
         {is_owner && profilePage && <EditDropdown handleEdit={handleEdit} />}
+        </Row>
       </Container>
     </Container>
   );

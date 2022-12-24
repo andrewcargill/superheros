@@ -1,20 +1,12 @@
 import React, { useEffect, useState } from "react";
-
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
 import { useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import Power from "./Power";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 
 function PowerPage() {
   const { id } = useParams();
   const [power, setPower] = useState({ results: [] });
-
-  const currentUser = useCurrentUser();
-
-
 
   useEffect(() => {
     const handleMount = async () => {
@@ -36,7 +28,7 @@ function PowerPage() {
   }, [id]);
 
   return (
-    <div>
+    <div className="container-fluid">
         <Power {...power.results[0]} setPowers={setPower} powerPage/>
     </div>
   );

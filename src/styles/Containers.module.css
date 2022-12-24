@@ -26,6 +26,7 @@
   border-width: 5px;
   border-radius: 5px;
   background-color: black;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .ContainerYellowBorder {
@@ -42,6 +43,7 @@
   border-width: 5px;
   border-radius: 20px;
   background-color: black;
+
 }
 
 .ContentToneBorder {
@@ -79,6 +81,12 @@
 .SmallComponent {
   width: 40vw;
   margin-top: 15vh;
+}
+
+.SingleComponent {
+  width: 60vw;
+  max-width: 800px;
+  margin-top: vh;
 }
 
 .FlexHeight {
@@ -204,6 +212,11 @@
 
   .SmallComponent {
     width: 100%;
+  }
+
+  .SingleComponent {
+    width: 90%;
+    margin-top: vh;
   }
 
   .FlexHeight {
