@@ -1,14 +1,12 @@
 import React from "react";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import {
-  Media,
   Container,
   Row
 } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import Avatar from "../../components/Avatar";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { EditDropdown } from "../../components/EditDropdown";
+import frame from "../../styles/Containers.module.css";
 
 const Power = (props) => {
   const {
@@ -34,18 +32,8 @@ const Power = (props) => {
 
   return (
 
-        <Container>
-          <Row>
-            <Media className="align-items-center justify-content-between">
-              <Link to={`/profiles/${id}`}>
-                <Avatar src={profile_image} height={55} />
-                {owner}
-              </Link>
-            </Media>
-          </Row>
-          <Row>
-            Hello
-          </Row>
+    <Container className={`${frame.ContentToneBorder}`}>
+          {/* power content */}
           <div>Speed: {speed}</div>
           <div>Flight: {flight}</div>
           <div>Strength: {strength}</div>
@@ -53,8 +41,7 @@ const Power = (props) => {
           <div>Fire: {fire}</div>
           <div>Lasers: {lasers}</div>
           {/* is current user the owner? */}
-          <Container>
-            Is Current User Owner? 
+          <Container> 
             {is_owner && powerPage && <EditDropdown
              handleEdit={handleEdit} 
              /> }

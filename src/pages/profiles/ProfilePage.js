@@ -9,29 +9,24 @@ import Power from "../powers/PowerPage";
 // import Power from "../powers/Power";
 
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-
-
+import { Container } from "react-bootstrap";
 
 function ProfilePage() {
   const { id } = useParams();
   const [profile, setProfile] = useState({ results: [] });
   const [power, setPower] = useState({ results: [] });
 
-
   useEffect(() => {
-    
     const handleMount = async () => {
       try {
-        const [{ data: profile}, {data: power }] = await Promise.all([
+        const [{ data: profile }, { data: power }] = await Promise.all([
           axiosReq.get(`/profiles/${id}/`),
           axiosReq.get(`/powers/?owner=${id}`),
         ]);
         setProfile({ results: [profile] });
         setPower({ results: [power] });
-        console.log('------------andy Line 33 power', power);
-        console.log('------------andy Line 33 profile', profile.id);
-        
-
+        console.log("------------andy Line 33 power", power);
+        console.log("------------andy Line 33 profile", profile.id);
       } catch (err) {
         console.log(err);
       }
@@ -42,15 +37,18 @@ function ProfilePage() {
 
   return (
     <Row className="h-100">
-      
-        <p>Popular profiles for mobile</p>
-        <Profile {...profile.results[0]} setProfiles={setProfile} profilePage/>
-
-      
-        Popular profiles for desktop
-      <Power
-      key={power.id}
-       />
+      <Container className="container-md">
+        <Row>
+          <Profile
+            {...profile.results[0]}
+            setProfiles={setProfile}
+            profilePage
+          />
+        </Row>
+        <Row>
+          <Power key={power.id} />
+        </Row>
+      </Container>
     </Row>
   );
 }

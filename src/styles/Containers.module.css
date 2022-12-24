@@ -61,6 +61,12 @@
   margin-bottom: 10vh;
 }
 
+.ImageContainer {
+  max-height: 300px;
+  max-width: 300px;
+  object-fit: cover;
+}
+
 .Padding {
   width: 40px;
 }
