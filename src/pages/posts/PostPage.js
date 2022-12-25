@@ -13,6 +13,7 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import CommentCreateForm from "../comments/CommentCreateForm";
 import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
+import frame from "../../styles/Containers.module.css";
 
 function PostPage() {
   const { id } = useParams();
@@ -40,12 +41,12 @@ function PostPage() {
   }, [id]);
 
   return (
-    <Row className="h-100">
-      <Col className="py-2 p-0 p-lg-2" lg={8}>
-        <p>Popular profiles for mobile</p>
-        <Post {...post.results[0]} setPosts={setPost} postPage />
-        <Container className={appStyles.Content}>
-          Comments
+    <Row>
+      <Container className={frame.SingleComponent}>
+        <Row>
+          <Post {...post.results[0]} setPosts={setPost} postPage />
+        </Row>
+        <Container>
           {currentUser ? (
             <CommentCreateForm
               profile_id={currentUser.profile_id}
@@ -79,10 +80,7 @@ function PostPage() {
             <span>No comments... yet</span>
           )}
         </Container>
-      </Col>
-      <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
-        Popular profiles for desktop
-      </Col>
+      </Container>
     </Row>
   );
 }

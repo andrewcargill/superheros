@@ -7,7 +7,7 @@ import styles from "../styles/MoreDropdown.module.css";
 // Dropdown needs access to the DOM node in order to position the Menu
 const ThreeDots = React.forwardRef(({ onClick }, ref) => (
   <i
-    className="fa-solid fa-bars"
+    className="fa-regular fa-pen-to-square"
     ref={ref}
     onClick={(e) => {
       e.preventDefault();

@@ -86,7 +86,6 @@
 .SingleComponent {
   width: 60vw;
   max-width: 800px;
-  margin-top: vh;
 }
 
 .FlexHeight {
