@@ -16,7 +16,6 @@ function PowersPage() {
       const URL = `/powers/`;
       try {
         const res = await axios.get(URL);
-        console.log(res.data);
         setPosts(res.data);
       } catch (error) {
         console.log(error);

@@ -14,7 +14,6 @@ const Profile = (props) => {
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
   const history = useHistory();
-  console.log("------------andy Line 28 is_owner", is_owner);
 
   const handleEdit = () => {
     history.push(`/profiles/${id}/edit`);

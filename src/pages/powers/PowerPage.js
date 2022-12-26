@@ -16,9 +16,6 @@ function PowerPage() {
 
         ]);
         setPower({ results: [power] });
-        console.log(power);
-        console.log('id', {id});
-
       } catch (err) {
         console.log(err);
       }

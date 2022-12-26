@@ -19,7 +19,6 @@ function PostsPage() {
       const URL = `/posts/`;
       try {
         const res = await axios.get(URL);
-        console.log(res.data);
         setPosts(res.data);
       } catch (error) {
         console.log(error);
@@ -27,7 +26,6 @@ function PostsPage() {
     }
 
     fetchPosts();
-    console.log("posts", posts);
   }, []);
 
   return (

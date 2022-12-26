@@ -16,7 +16,6 @@ function ProfilesPage() {
       const URL = `/profiles/`;
       try {
         const res = await axios.get(URL);
-        console.log(res.data);
         setPosts(res.data);
       } catch (error) {
         console.log(error);

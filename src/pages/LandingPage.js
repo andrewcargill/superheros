@@ -11,7 +11,6 @@ import PostsPage from "./posts/PostsPage";
 
 const LandingPage = () => {
   const currentUser = useCurrentUser();
-  console.log(currentUser);
   const loggedOutLanding = (
     <div className={styles.Styles}>
       <Row>

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -16,7 +16,6 @@ function PowerEditForm() {
   const [errors, setErrors] = useState({});
 
   const [powerData, setPowerData] = useState({
-    owner: "",
     is_owner: "",
     speed: "",
     flight: "",
@@ -34,7 +33,6 @@ function PowerEditForm() {
       try {
         const { data } = await axiosReq.get(`/powers/${id}/`);
         const {
-          owner,
           is_owner,
           speed,
           flight,
@@ -43,7 +41,7 @@ function PowerEditForm() {
           fire,
           lasers,
         } = data;
-        console.log({ data });
+        
         is_owner
           ? setPowerData({ speed, flight, strength, vision, fire, lasers })
           : history.push("/");

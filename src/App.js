@@ -10,7 +10,6 @@ import LandingPage from "./pages/LandingPage";
 import PostCreateForm from "./components/PostCreateForm";
 import PostPage from "./pages/posts/PostPage";
 import PostsPage from "./pages/posts/PostsPage";
-import { useCurrentUser } from "./contexts/CurrentUserContext";
 import PostEditForm from "./pages/posts/PostEditForm";
 import ProfilePage from "./pages/profiles/ProfilePage";
 import ProfilesPage from "./pages/profiles/ProfilesPage";
@@ -18,10 +17,8 @@ import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import PowerPage from "./pages/powers/PowerPage";
 import PowerEditForm from "./pages/powers/PowerEditForm";
 import PowersPage from "./pages/powers/PowersPage";
-import TestPage from "./pages/LayoutTest";
 
 function App() {
-const currentUser = useCurrentUser();
 
   return (
     <div className={styles.App}>
@@ -30,7 +27,6 @@ const currentUser = useCurrentUser();
         <Switch>
 
               <Route exact path="/posts" render={() => <PostsPage />} />
-              <Route exact path="/test" render={() => <TestPage />} />
               <Route exact path="/" render={() => <LandingPage />} />
               <Route exact path="/signin" render={() => <SignInForm />} />
               <Route exact path="/signup" render={() => <SignUpForm />} />
@@ -44,7 +40,7 @@ const currentUser = useCurrentUser();
               <Route exact path="/powers" render={() => <PowersPage /> } />
               <Route exact path="/powers/:id" render={() => <PowerPage />} />
               <Route exact path="/powers/:id/edit" render={() => <PowerEditForm />} />
-              <Route render={() => <p>Page not found!</p>} />
+              <Route render={() => <p>Sorry, That page cannot be found!</p>} />
             </Switch>
           </Container>
         </div>

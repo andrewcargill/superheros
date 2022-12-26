@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
 import { Container, Row, Media, Form } from "react-bootstrap";
-import Avatar from "../../components/Avatar";
 import appStyles from "../../App.module.css";
 import { Link } from "react-router-dom";
 import styles from "../../styles/SearchPowers.module.css";
@@ -15,7 +14,6 @@ function PowersSearch() {
       const URL = `/powers/`;
       try {
         const res = await axios.get(URL);
-        console.log(res.data);
         setPosts(res.data);
       } catch (error) {
         console.log(error);

@@ -21,8 +21,6 @@ function ProfilePage() {
         ]);
         setProfile({ results: [profile] });
         setPower({ results: [power] });
-        console.log("------------andy Line 33 power", power);
-        console.log("------------andy Line 33 profile", profile.id);
       } catch (err) {
         console.log(err);
       }
