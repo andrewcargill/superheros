@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
-import { Container, Row, Media, Card, Col } from "react-bootstrap";
-import Avatar from "../../components/Avatar";
+import { Container, Row, Card, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Asset from "../../components/Asset";
 import frame from "../../styles/Containers.module.css";
 import appStyles from "../../App.module.css";
-import PowersSearch from "../powers/PowersSearch";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import ProfileSearch from "../../components/ProfileSearch";
@@ -44,9 +42,10 @@ function PostsPage() {
         {/*MAIN CONTENT*/}
         <Col className="order-lg-1 col-lg-8">
           {/*MAIN CONTENT - SUB CONTAINER*/}
-          <h2 className={`${appStyles.ComicText} text-center`}>The latest Hero posts!!</h2>
+          <h2 className={`${appStyles.ComicText} text-center`}>
+            The latest Hero posts!!
+          </h2>
           <Container className={` ${frame.FixedHeight} container-md`}>
-            
             {/*post content - start*/}
             {posts.results.length && (
               <InfiniteScroll
