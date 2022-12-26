@@ -108,13 +108,13 @@ function ProfileEditForm() {
       ))}
 
       <Button
-        className={`${btnStyles.Button} ${btnStyles.Blue}`}
+        className={`${btnStyles.ButtonYellow}`}
         onClick={() => history.goBack()}
       >
-        cancel
+        CANCEL!
       </Button>
-      <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
-        update
+      <Button className={`${btnStyles.ButtonYellow}`} type="submit">
+        UPDATE!
       </Button>
     </div>
   );
@@ -122,10 +122,13 @@ function ProfileEditForm() {
   return (
     <Form onSubmit={handleSubmit}>
       <Row>
+        <Container className={frame.SingleComponent}>
         <Container
           className={`${frame.ContentToneBorder} container-md justify-content-center`}
         >
-            <h5 className={appStyles.ComicText}>Load up that image and share!!</h5>
+          
+            <h5 className={appStyles.ComicText}>Tell other heros about yourself!</h5>
+            
           <Form.Group className="text-center">
             {image ? (
               <>
@@ -164,6 +167,8 @@ function ProfileEditForm() {
           ))}
           <Container className={appStyles.Content}>{textFields}</Container>
         </Container>
+        </Container>
+        
 
       </Row>
     </Form>
