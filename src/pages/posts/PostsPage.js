@@ -44,7 +44,9 @@ function PostsPage() {
         {/*MAIN CONTENT*/}
         <Col className="order-lg-1 col-lg-8">
           {/*MAIN CONTENT - SUB CONTAINER*/}
+          <h2 className={`${appStyles.ComicText} text-center`}>The latest Hero posts!!</h2>
           <Container className={` ${frame.FixedHeight} container-md`}>
+            
             {/*post content - start*/}
             {posts.results.length && (
               <InfiniteScroll
@@ -61,7 +63,7 @@ function PostsPage() {
                       </div>
                     </Container>
                     <Container
-                      className={`${frame.ContentToneBorder} ${postsStyles.Shake} ${frame.Posts}`}
+                      className={`${frame.ContentToneBorder} ${frame.Posts}`}
                     >
                       <Row className="justify-content-center">
                         <Link to={`/posts/${post.id}`}>

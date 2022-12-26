@@ -1,5 +1,27 @@
+.Header {
+    margin-bottom: 10px;
+}
+
 .ResultsScroll {
-    height: 80vh;
+    height: 40vh;
     overflow: scroll;
+    border: solid;
+    border-radius: 5px;
    white-space: nowrap;
+   background-color: white;
   }
+
+/*Mobile sizing*/
+@media screen and (max-width: 992px){
+    .Header {
+        font-size: x-small;
+        margin-bottom: 3px;
+    }
+    
+    .ResultsScroll {
+        height: 70px;
+        overflow: scroll;
+       white-space: nowrap;
+       
+      }
+}

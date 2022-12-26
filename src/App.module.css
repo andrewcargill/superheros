@@ -64,5 +64,11 @@
         padding-top: 10px;
     }
 
-
 }
+
+@media screen and (max-width: 370px) {
+    .HeroText {
+        font-size: 8vw;
+    }
+}
+
