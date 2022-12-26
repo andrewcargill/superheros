@@ -9,7 +9,7 @@ import Image from "react-bootstrap/Image";
 
 import Asset from "../../components/Asset";
 
-import Upload from "../../assets/upload.png";
+import Upload from "../../assets/upload.jpg";
 import frame from "../../styles/Containers.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
@@ -29,23 +29,22 @@ function PostEditForm() {
 
   const imageInput = useRef(null);
   const history = useHistory();
-  const {id} = useParams();
+  const { id } = useParams();
 
   useEffect(() => {
     const handleMount = async () => {
-        try{
-            const {data} = await axiosReq.get(`/posts/${id}/`)
-            const {image, caption, is_owner} = data;
+      try {
+        const { data } = await axiosReq.get(`/posts/${id}/`);
+        const { image, caption, is_owner } = data;
 
-            is_owner ? setPostData({image, caption}) : history.push('/')
-        }catch(err){
-            console.log(err);
-
-        }
+        is_owner ? setPostData({ image, caption }) : history.push("/");
+      } catch (err) {
+        console.log(err);
+      }
     };
 
     handleMount();
-  },[history, id]);
+  }, [history, id]);
 
   const handleChange = (event) => {
     setPostData({
@@ -69,13 +68,11 @@ function PostEditForm() {
     const formData = new FormData();
 
     formData.append("caption", caption);
-    
+
     if (imageInput?.current?.files[0]) {
-      console.log('------------andy Line 74 ', imageInput.current.files[0] );
-        formData.append("image", imageInput.current.files[0]);
-      }
-    
-    
+      console.log("------------andy Line 74 ", imageInput.current.files[0]);
+      formData.append("image", imageInput.current.files[0]);
+    }
 
     try {
       await axiosReq.put(`/posts/${id}`, formData);
@@ -106,13 +103,13 @@ function PostEditForm() {
       ))}
 
       <Button
-        className={`${btnStyles.Button} ${btnStyles.Blue}`}
+        className={`${btnStyles.ButtonYellow}`}
         onClick={() => history.goBack()}
       >
-        cancel
+        CANCEL
       </Button>
-      <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
-        create
+      <Button className={`${btnStyles.ButtonYellow}`} type="submit">
+        UPDATE!
       </Button>
     </div>
   );
@@ -120,49 +117,55 @@ function PostEditForm() {
   return (
     <Form onSubmit={handleSubmit}>
       <Row>
-        <Container
-          className={`${frame.ContentToneBorder} container-md justify-content-center`}
-        >
-            <h5 className={appStyles.ComicText}>Load up that image and share!!</h5>
-          <Form.Group className="text-center">
-            {image ? (
-              <>
-                <figure>
-                  <Image className={appStyles.Image} src={image} rounded />
-                </figure>
-                <div>
-                  <Form.Label
-                    className={`${btnStyles.Button} ${btnStyles.Blue} btn`}
-                    htmlFor="image-upload"
-                  >
-                    Change the image
-                  </Form.Label>
-                </div>
-              </>
-            ) : (
-              <Form.Label
-                className="d-flex justify-content-center"
-                htmlFor="image-upload"
-              >
-                <Asset src={Upload} message="Click or tap to upload an image" />
-              </Form.Label>
-            )}
+        <Container className={frame.SingleComponent}>
+          <Container
+            className={`${frame.ContentToneBorder} container-md justify-content-center`}
+          >
+            <h5 className={appStyles.ComicText}>
+              Load up that image and share!!
+            </h5>
+            <Form.Group className="text-center">
+              {image ? (
+                <>
+                  <figure>
+                    <Image className={appStyles.Image} src={image} rounded />
+                  </figure>
+                  <div>
+                    <Form.Label
+                      className={`${btnStyles.Button} ${btnStyles.Blue} btn`}
+                      htmlFor="image-upload"
+                    >
+                      Change the image
+                    </Form.Label>
+                  </div>
+                </>
+              ) : (
+                <Form.Label
+                  className="d-flex justify-content-center"
+                  htmlFor="image-upload"
+                >
+                  <Asset
+                    src={Upload}
+                    message="Click or tap to upload an image"
+                  />
+                </Form.Label>
+              )}
 
-            <Form.File
-              id="image-upload"
-              accept="image/*"
-              onChange={handleChangeImage}
-              ref={imageInput}
-            />
-          </Form.Group>
-          {errors?.image?.map((message, idx) => (
-            <Alert variant="warning" key={idx}>
-              {message}
-            </Alert>
-          ))}
-          <Container className={appStyles.Content}>{textFields}</Container>
+              <Form.File
+                id="image-upload"
+                accept="image/*"
+                onChange={handleChangeImage}
+                ref={imageInput}
+              />
+            </Form.Group>
+            {errors?.image?.map((message, idx) => (
+              <Alert variant="warning" key={idx}>
+                {message}
+              </Alert>
+            ))}
+            <Container className={appStyles.Content}>{textFields}</Container>
+          </Container>
         </Container>
-
       </Row>
     </Form>
   );
