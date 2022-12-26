@@ -7,6 +7,7 @@ import InputGroup from "react-bootstrap/InputGroup";
 import styles from "../../styles/Button.module.css";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
+import btnStyles from "../../styles/Button.module.css"
 
 function CommentCreateForm(props) {
   const { post, setPost, setComments, profileImage, profile_id } = props;
@@ -49,8 +50,8 @@ function CommentCreateForm(props) {
             <Avatar src={profileImage} />
           </Link>
           <Form.Control
-            className={styles.Form}
-            placeholder="my comment..."
+            className={`${styles.Form}`}
+            placeholder="Share your thoughts..."
             as="textarea"
             value={content}
             onChange={handleChange}
@@ -59,7 +60,7 @@ function CommentCreateForm(props) {
         </InputGroup>
       </Form.Group>
       <button
-        className={`${styles.Button} btn d-block ml-auto`}
+        className={`${btnStyles.ButtonComment} btn d-block ml-auto`}
         disabled={!content.trim()}
         type="submit"
       >

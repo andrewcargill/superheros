@@ -43,9 +43,9 @@ function PostPage() {
   return (
     <Row>
       <Container className={frame.SingleComponent}>
-        <Row>
+        
           <Post {...post.results[0]} setPosts={setPost} postPage />
-        </Row>
+        
         <Container>
           {currentUser ? (
             <CommentCreateForm

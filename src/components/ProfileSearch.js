@@ -54,7 +54,7 @@ function ProfileSearch({ filter = "" }) {
             </Container>
           ))
         ) : (
-          <div>LOADING</div>
+          <div>LOADING...</div>
         )}
       </div>
     </div>

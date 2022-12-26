@@ -11,6 +11,7 @@ import PowersSearch from "../powers/PowersSearch";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import ProfileSearch from "../../components/ProfileSearch";
+import postsStyles from "../../styles/Posts.module.css";
 
 function PostsPage() {
   const [posts, setPosts] = useState({ results: [] });
@@ -28,18 +29,17 @@ function PostsPage() {
     }
 
     fetchPosts();
-    console.log('posts', posts)
+    console.log("posts", posts);
   }, []);
-
 
   return (
     <div>
       <Row md={1} sm={1} xs={1} lg={3}>
         {/*SIDE CONTENT*/}
         <Col
-          className={`${frame.Black_}  ${frame.SideContainer} d-none d-xl-block order-lg-3 col-lg-3`}
+          className={`${frame.Black_}  ${frame.SideContainer}  d-xl-block order-lg-3 col-lg-3`}
         >
-          <ProfileSearch/>
+          <ProfileSearch />
         </Col>
         {/*MAIN CONTENT*/}
         <Col className="order-lg-1 col-lg-8">
@@ -47,48 +47,45 @@ function PostsPage() {
           <Container className={` ${frame.FixedHeight} container-md`}>
             {/*post content - start*/}
             {posts.results.length && (
-            <InfiniteScroll
-              children={posts.results.map((post) => (
-                <div key={post.id}>
-                  <Row xs={1} sm={2}>
-                    <Col className="col-8">
-                      <Link to={`/profiles/${post.profile_id}`}>
-                        <h1 className={appStyles.HeroText}>{post.owner}</h1>
-                      </Link>
-                    </Col>
-                    <Col>
-                      <p>{post.updated_at}</p>
-                    </Col>
-                  </Row>
-                  <Container className={`${frame.PostContainer}`} key={post.id}>
-                    <Row>
-                      {/* <Media className="align-items-center justify-content-between">
-                    <Link to={`/profiles/${post.profile_id}`}>
-                      <Avatar src={post.profile_image} height={55} />
-                       
-                    </Link>
-                    <h3 className={appStyles.HeroText}>{post.owner}</h3>
-                  </Media> */}
-                    </Row>
-                    <Row>
-                      <Link to={`/posts/${post.id}`}>
-                        <Card.Img
-                          src={post.image}
-                          alt={post.caption}
-                          height={400}
-                        />
-                      </Link>
-                    </Row>
-
-                    <div className={frame.WrapText}>{post.caption}</div>
-                  </Container>
-                </div>
-              ))}
-              dataLength={posts.results.length}
-              loader={<Asset spinner />}
-              hasMore={!!posts.next}
-              next={() => fetchMoreData(posts, setPosts)}
-            />
+              <InfiniteScroll
+                children={posts.results.map((post) => (
+                  <div key={`${post.id}`}>
+                    <Container className={postsStyles.Shake}>
+                      <div className="justify-content-center">
+                        <Link to={`/profiles/${post.profile_id}`}>
+                          <h1 className={`text-center ${appStyles.HeroText}`}>
+                            {" "}
+                            {post.owner}
+                          </h1>
+                        </Link>
+                      </div>
+                    </Container>
+                    <Container
+                      className={`${frame.ContentToneBorder} ${postsStyles.Shake} ${frame.Posts}`}
+                    >
+                      <Row className="justify-content-center">
+                        <Link to={`/posts/${post.id}`}>
+                          <Card.Img
+                            className={frame.ImageContainer}
+                            src={post.image}
+                            alt={post.caption}
+                          />
+                        </Link>
+                      </Row>
+                      <div>
+                        <p className={appStyles.ComicText}> {post.caption}</p>
+                      </div>
+                      <div className="text-right">
+                        <p>{post.updated_at}</p>
+                      </div>
+                    </Container>
+                  </div>
+                ))}
+                dataLength={posts.results.length}
+                loader={<Asset spinner />}
+                hasMore={!!posts.next}
+                next={() => fetchMoreData(posts, setPosts)}
+              />
             )}
             {/*post content - end*/}
           </Container>

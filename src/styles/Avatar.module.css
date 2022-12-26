@@ -1,5 +1,7 @@
-.Profile {
+.Image {
     border-style: solid;
     border-color: black;
     border-radius: 50%;
+    object-fit: cover;
+
 }

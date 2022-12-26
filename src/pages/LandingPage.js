@@ -57,7 +57,6 @@ const LandingPage = () => {
   const loggedInLanding = (
     <div>
       <Container>
-        <h1>WELCOME BACK!</h1>
         <PostsPage />
       </Container>
     </div>

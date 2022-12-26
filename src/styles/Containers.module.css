@@ -64,13 +64,19 @@
 }
 
 .ImageContainer {
+  padding: 5px;
   max-height: 300px;
+  min-height: 200px;
   max-width: 300px;
   object-fit: cover;
 }
 
 .Padding {
   width: 40px;
+}
+
+.Posts {
+  margin-bottom: 10vh;
 }
 
 .Padding div {
@@ -91,6 +97,13 @@
 .FlexHeight {
   height: 72vh;
 }
+
+/* .Avatar {
+  border-radius: 25%;
+  border-color: black;
+  border: solid;
+  width: 200px;
+} */
 
 /*https://www.geeksforgeeks.org/how-to-fixed-one-column-and-scrollable-other-column-or-columns-in-bootstrap/*/
 
@@ -189,6 +202,8 @@
   background-color: blue;
 }
 
+
+
 /*Mobile sizing*/
 @media screen and (max-width: 768px){
   .Padding {
@@ -223,9 +238,10 @@
   }
 
   .SideContainer {
-    max-height: 10vh;
+    max-height: 15vh;
     overflow: scroll;
    white-space: nowrap;
+   margin-bottom: 20px;
   }
 }
 

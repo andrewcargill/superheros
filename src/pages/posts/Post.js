@@ -40,14 +40,15 @@ const Post = (props) => {
 
   return (
     <div>
-      {/* <Container>
+      <Container>
         <div className="justify-content-center">
           <Link to={`/profiles/${profile_id}`}>
             <h1 className={`text-center ${appStyles.HeroText}`}> {owner}</h1>
           </Link>
         </div>
-      </Container> */}
+      </Container>
       <Container className={`${frame.ContentToneBorder}`}>
+      
         <Row className="justify-content-center">
           <Link to={`/posts/${id}`}>
             <Card.Img

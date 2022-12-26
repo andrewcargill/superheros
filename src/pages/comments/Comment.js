@@ -8,6 +8,8 @@ import CommentEditForm from "./CommentEditForm";
 import styles from "../../styles/Comment.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { axiosRes } from "../../api/axiosDefaults";
+import appStyles from "../../App.module.css";
+import frame from "../../styles/Containers.module.css";
 
 const Comment = (props) => {
   const {
@@ -48,11 +50,13 @@ const Comment = (props) => {
     <>
       <hr />
       <Media>
+        
         <Link to={`/profiles/${profile_id}`}>
           <Avatar src={profile_image} />
         </Link>
+       
         <Media.Body className="align-self-center ml-2">
-          <span className={styles.Owner}>{owner}</span>
+          <span className={`${styles.Owner} ${appStyles.HeroText}`}>{owner}</span>
           <span className={styles.Date}>{updated_at}</span>
           {showEditForm ? (
             <CommentEditForm
