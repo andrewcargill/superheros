@@ -1,4 +1,64 @@
-# Getting Started with Create React App
+# Hero Chat
+Hero Chat is a fantasy based website where 'want-to-be' superheros can socialize and share posts about their good world saving adventures.
+
+The context is that the 'World Government Agency' has hidden a top-secret website deep in the internet who's location is only known by the worlds Superheros. 
+
+Once inside the Comic-book styled environment makes for a fun place where these saviours of the world can hang-out and unwind. 
+
+## Testing
+|Page|State|Test|Result
+|---|---|---|---|
+|Landing|Not signed in|User sees landing page|PASS|
+||Not signed in|No menu visible|PASS|
+||Not signed in|Sign in button flashing|PASS|
+||Not signed in|Responsive mobile > desktop|PASS|
+||Not signed in|Sign in loads sign in view|PASS|
+|Sign in|Not signed in|'sign up here' > 'sign up' view|PASS|
+||Not signed in|Enter wrong details - Error feedback|PASS|
+||Not signed in|Responsive mobile > desktop|PASS|
+||On sign in|home view loaded|PASS|
+|Sign up|||PASS|
+||Not signed in|'sign in' link > sign in view|PASS|
+||Not signed in|Feedback on none-unique name|PASS|
+||Not signed in|Feedback on password criteria|PASS|
+||Successful sign up|Taken to home view|PASS|
+||Not signed up|No menu bar visible|PASS|
+||Not signed up|Responsive mobile > desktop|PASS|
+|Sign out|Logged in|Navbar 'sign out' > landing view|PASS|
+|Home|Signed in|Menu visible|PASS|
+||Signed in|'Loader' spins on load up of posts|PASS|
+||Signed in|'Loading..' text on load up of 'hero search|PASS|
+||Signed in|Posts can be vertically scrolled|PASS|
+||Signed in|Posts load in blocks of 10 posts|PASS|
+||Signed in|Shack effect on post owner hover|PASS|
+||Signed in|Hero search results vertical scrolling|PASS|
+||Signed in|Hero search functioning with text input|PASS|
+||Signed in|Responsive mobile > desktop|PASS|
+||Signed in|When post owner name clicked - post owner profile view loaded|PASS|
+||Signed in|When post image clicked - correct post view loaded|PASS|
+|Navbar|Signed in|Visible to signed in user|PASS|
+||Signed in|Responsive mobile > desktop|PASS|
+||Signed in|'Home' loads home view|PASS|
+||Signed in|'Profile' loads current users profile|PASS|
+||Signed in|'+post' loads add post view|PASS|
+||Signed in|'logo' loads home view|PASS|
+|Hero Search|Signed in|On clicking on a user it loads correct profile page|PASS|
+||Signed in|No results show no results |PASS|
+||Signed in|Text search displays correct results|PASS|
+|Post view|Signed in but not post owner|Can view the post and comments|PASS|
+||Signed in but not post owner|Clicked on post owner name loads post owners profile view|PASS|
+||Signed in and Post owner|Post displayed with edit options|PASS|
+||Signed in and Post owner|Post can be deleted|PASS|
+||Signed in and Post owner|Post 'edit' loaded edit view|PASS|
+||Signed in and Post owner|Clicked on username loads correct user profile|PASS|
+|Comments|Signed in|If no comments - correct message shown|PASS|
+||Signed in|If comments already posted - edit option displayed|PASS|
+||Signed in|User can add a comment|PASS|
+||Signed in|User can delete a comment|PASS|
+||Signed in|User can edit a comment|PASS|
+||Signed in|User can see all comments related to current viewed post|PASS|
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
