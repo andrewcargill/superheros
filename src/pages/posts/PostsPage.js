@@ -45,7 +45,7 @@ function PostsPage() {
           </h2>
           <Container className={` ${frame.FixedHeight} container-md`}>
             {/*post content - start*/}
-            {posts.results.length && (
+            {posts.results.length ? (
               <InfiniteScroll
                 children={posts.results.map((post) => (
                   <div key={`${post.id}`}>
@@ -85,7 +85,9 @@ function PostsPage() {
                 hasMore={!!posts.next}
                 next={() => fetchMoreData(posts, setPosts)}
               />
-            )}
+            ): 
+            <Asset spinner />
+            }
             {/*post content - end*/}
           </Container>
         </Col>
