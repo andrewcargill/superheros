@@ -70,7 +70,6 @@ function PostEditForm() {
     formData.append("caption", caption);
 
     if (imageInput?.current?.files[0]) {
-      
       formData.append("image", imageInput.current.files[0]);
     }
 
@@ -108,7 +107,10 @@ function PostEditForm() {
       >
         CANCEL
       </Button>
-      <Button className={`${btnStyles.ButtonYellow} ${btnStyles.Medium}`} type="submit">
+      <Button
+        className={`${btnStyles.ButtonYellow} ${btnStyles.Medium}`}
+        type="submit"
+      >
         UPDATE!
       </Button>
     </div>
@@ -150,13 +152,18 @@ function PostEditForm() {
                   />
                 </Form.Label>
               )}
-
-              <Form.File
-                id="image-upload"
-                accept="image/*"
-                onChange={handleChangeImage}
-                ref={imageInput}
-              />
+              <br />
+              <div className="invisible">
+                
+                  <Form.File
+                    className=""
+                    id="image-upload"
+                    accept="image/*"
+                    onChange={handleChangeImage}
+                    ref={imageInput}
+                  />
+            
+              </div>
             </Form.Group>
             {errors?.image?.map((message, idx) => (
               <Alert variant="warning" key={idx}>

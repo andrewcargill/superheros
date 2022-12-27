@@ -152,6 +152,7 @@ function ProfileEditForm() {
 
             <Form.File
               id="image-upload"
+              className="invisible"
               accept="image/*"
               onChange={handleChangeImage}
               ref={imageInput}
