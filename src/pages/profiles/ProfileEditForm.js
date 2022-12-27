@@ -35,9 +35,9 @@ function ProfileEditForm() {
     const handleMount = async () => {
         try{
             const {data} = await axiosReq.get(`/posts/${id}/`)
-            const {image, caption, is_owner} = data;
+            const {image, bio, is_owner} = data;
 
-            is_owner ? setPostData({image, caption}) : history.push('/')
+            is_owner ? setPostData({image, bio}) : history.push('/')
         }catch(err){
             console.log(err);
         }
@@ -90,7 +90,7 @@ function ProfileEditForm() {
   const textFields = (
     <div className="text-center">
       <Form.Group>
-        <Form.Label>bio</Form.Label>
+        <Form.Label>Bio</Form.Label>
         <Form.Control
           type="text"
           name="bio"
