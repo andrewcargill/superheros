@@ -6,6 +6,14 @@ The context is that the 'World Government Agency' has hidden a top-secret websit
 Once inside the Comic-book styled environment makes for a fun place where these saviours of the world can hang-out and unwind. 
 
 ## Testing
+
+<details><summary>
+Front End Manual Testing
+</summary>
+
+
+
+
 |Page|State|Test|Result
 |---|---|---|---|
 |Landing|Not signed in|User sees landing page|PASS|
@@ -49,7 +57,8 @@ Once inside the Comic-book styled environment makes for a fun place where these 
 ||Signed in but not post owner|Clicked on post owner name loads post owners profile view|PASS|
 ||Signed in and Post owner|Post displayed with edit options|PASS|
 ||Signed in and Post owner|Post can be deleted|PASS|
-||Signed in and Post owner|Post 'edit' loaded edit view|PASS|
+||Signed in and Post owner|Post 'edit' loaded edit view|!BUG|
+|||BUG: Sometimes takes you back to home||
 ||Signed in and Post owner|Clicked on username loads correct user profile|PASS|
 |Comments|Signed in|If no comments - correct message shown|PASS|
 ||Signed in|If comments already posted - edit option displayed|PASS|
@@ -57,10 +66,51 @@ Once inside the Comic-book styled environment makes for a fun place where these 
 ||Signed in|User can delete a comment|PASS|
 ||Signed in|User can edit a comment|PASS|
 ||Signed in|User can see all comments related to current viewed post|PASS|
+||Signed in|Correct comments load for correct post|PASS|
+||Signed in|Link to comment owners profile view|PASS|
+|Post edit|Signed in|Caption loads in edit view|PASS|
+||Signed in|Caption only updates on 'update'|PASS|
+||Signed in|'Cancel' returns to post|PASS|
+||Signed in|Image updates and saves|!BUG|
+|||BUG: .JPG files work. Some PNG do not||
+||Signed in|Responsive mobile > desktop|PASS|
+|Add post|Signed in|Responsive mobile > desktop|PASS|
+||Signed in|Correct username shown on post save|PASS|
+||Signed in|Uploading image|!BUG|
+|||BUG: .JPG files work. Some PNG do not||
+||Signed in|Caption added and saved|PASS|
+||Signed in|Default image if no image|PASS|
+|Profile view|Signed in||PASS|
+||Signed in |Responsive mobile > desktop|PASS|
+||Signed in|Page loads as expected|PASS|
+||Signed in and owner|edit options displayed|PASS|
+||Signed in|User cannot delete post|PASS|
+|Profile Edit|Signed in|Responsive mobile > desktop|PASS|
+||Signed in and Profile owner|Profile 'edit' loaded edit view|!BUG|
+|||BUG: Sometimes takes you back to home||
+||Signed in and Profile owner|Bio text is shown|!BUG|
+|||No text is shown||
+||Signed in and Profile owner|Current image shown|!BUG|
+||Signed in and Profile owner|User can update bio|PASS|
+||Signed in and Profile owner|User can update image|PASS|
+|||JPG files are fine. Some PNG cause crash||
+||Signed in and Profile owner|Cancel returns to Profile view|PASS|
+||Signed in and Profile owner|Update saves and returns to Profile view|PASS|
+|Powers Edit|Signed in and owner|Edit dropdown visible via profile view|PASS|
+|Powers Edit|Signed in and owner|Edit button loads powers edit view|PASS|
+|Powers Edit|Signed in and owner|All powers can be updated|PASS|
+||Signed in and owner |Responsive mobile > desktop|PASS|
+||Signed in and owner|Cancel returns to Profile view|PASS|
+||Signed in and owner|Update saves changes and returns to Profile view|PASS|
+||Signed in and owner|Only numbers can be entered|PASS|
+||Signed in and owner|Error message if values over 5|PASS|
+
+</details>
 
 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
 
 ## Available Scripts
 
