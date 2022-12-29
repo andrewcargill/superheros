@@ -5,7 +5,20 @@ The context is that the 'World Government Agency' has hidden a top-secret websit
 
 Once inside the Comic-book styled environment makes for a fun place where these saviours of the world can hang-out and unwind. 
 
+---
+
+[Visit the website](https://superherosocial.herokuapp.com/)
+
+[Visit the API](https://superheros.herokuapp.com/)
+
+
+---
+
+
+
 ![Picture of website on various screen sizes](../superheros/src/assets/readme/readme_app.jpg)
+
+---
 
 ## Contents
 - [Project Goals](#project-goals)
@@ -17,6 +30,8 @@ Once inside the Comic-book styled environment makes for a fun place where these 
 - [Deployment](#deployment)
 - [Future Development](#future-development)
 - [Credits](#credits-and-acknowledgement)
+
+---
 
 ## Project Goals
 A react frontend website and django backend API. Linked together to provide full CRUD functionality. 
@@ -44,10 +59,14 @@ A site that can only be accessed via login and provides users with the features 
 |10| Document all known bugs and issues | Ensure documentation is clear and honest |
 
 
+---
+
+
 
 ## Features
 
 ### Landing page
+
 ![image of landing page](../superheros/src/assets/readme/readme_landingpage.jpg)
 - Styled to give the feel of a government database login
 - user can only login from this screen
@@ -77,6 +96,8 @@ A site that can only be accessed via login and provides users with the features 
 ![screen grab of profile view](../superheros/src/assets/readme/readme_profile.jpg)
 - Find out more about the superhero 
 - Owner can edit the profile and powers
+
+---
 
 
 ## UX Design
@@ -129,6 +150,9 @@ Time was on my mind throughout the sites development, with design and functional
 |Powers|This was implemented in the API as planned|Added to the profiles for ease of use|
 |Creating a post|Implemented as planned||
 |General styling|This was followed but evolved through development| I would have liked to have replicated the exact design in the mockups for all components|
+
+---
+
 ## Development
 ### Reuse of components
 - The navigation is used throughout the site along with the post, comment, profile and powers components. 
@@ -266,6 +290,8 @@ Sprints
 
 </details>
 
+---
+
 ## Testing
 Extensive manual testing has been carried out on both the Frontend and Backend elements of this project. Any bugs that were found have been document in the results and are details in the [Bugs section](#bugs) of this documentation.
 <details><summary>Front End Manual Testing</summary>
@@ -390,13 +416,20 @@ Backend Manual Testing
 
 </details>
 
+---
+
 ## Bugs
 
+---
+
 ## Deployment
+
+----
 
 ## Future Development
 - Users can compare the powers of two superheros (along the line of top trumps)
 - City Major login - They can reward superheros with money and also add posts that link to specific Superheros
 - Public login - They can rate superheros and send fan-mail (direct messages to Superheros) 
+---
 
 ## Credits and acknowledgement 
