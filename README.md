@@ -5,6 +5,33 @@ The context is that the 'World Government Agency' has hidden a top-secret websit
 
 Once inside the Comic-book styled environment makes for a fun place where these saviours of the world can hang-out and unwind. 
 
+## Project Goals
+A react frontend website and django backend API. Linked together to provide full CRUD functionality. 
+
+A site that can only be accessed via login and provides users with the features of creating posts, comments and profiles. 
+
+### The factors in setting these goals:
+- Project submission deadline (Production time of 2 weeks).
+- Entry level knowledge and understanding of creating a React frontend and API backend.
+- This project feel over the Christmas and New Year period so there was no access to Mentor support and limited access to tutor support. 
+
+### Project goals:
+
+|No.|Goal|Description|
+|---|---|---|
+|1|Log in/log out/Sign up | User can create an account and login or log out|
+|2|Posts page styled with SuperHero theme | A responsive homepage with post CRUD functionality|
+|3|Comments | Comments for each post with CRUD functionality|
+|4|Profiles (Created on new account) | Profiles with full CRUD Functionality |
+|5|Powers (Created on new account) | Powers for each User with full CRUD Functionality |
+|6| Powers search and rating | Powers can be searched via a drop down menu |
+|7| Site styled in strong comic-book styling | A design theme that runs consistently across the site |
+|8| Front-end react website and custom built API| Hosted on Heroku |
+|9| Deployment of final website to Heroku | Upon project completion | 
+|10| Document all known bugs and issues | Ensure documentation is clear and honest |
+
+
+
 ## Features
 ### Landing page
 - Styled to give the feel of a government database login
@@ -35,17 +62,17 @@ Once inside the Comic-book styled environment makes for a fun place where these 
 
 ## UX Design
 ### Working within the limitations
-Due to how the course has been structured I had two weeks to create a project that met the Code Institute pass requirements for this module. This was two-weeks over the Christmas and New Year period. So I knew I needed to created something realistically achievable within these hard timeline limitations. 
+Due to how the course has been structured I had two weeks to create a project that met the Code Institute pass requirements for this module. This was two weeks over the Christmas and New Year period. So I knew I needed to created something realistically achievable within these hard timeline limitations. 
 
-I had not worked with React before and had limited knowledge of creating an Django API that linked to a React repository... so time would need to be allowed to ensure this basic function worked.
+I had not worked with React before and had limited knowledge of creating an Django API that linked to a React repository. Time would need to be allocated to ensure this basic function, of the backend talking to the frontend, worked well.
 
-This information lead my thinking in the UX Design process. This needed to be a simple site with a strong design and basic functionality. Sometime that could be expanded on in the future so that the site would be a strong portfolio project. 
+This formed the hard-lines around my thinking in the UX Design process. This needed to be a simple site with a strong design and basic functionality. Sometime that could be expanded on in the future so that the site could develop into a strong portfolio project. 
 
 ### Why SuperHeros?
-I knew it was going to be a basic post, comments and profile react website, but I did not want to do 'another' social media site and that's when SuperHeros popped into my mind. This theme enabled me to show a different design style from my pervious portfolio projects and share some humour and personality.
+I knew it was going to be a basic post, comments and profile react website, but I did not want to create a generic social media site. This theme enabled me to show a different design style from my pervious portfolio projects.
 
 ### Research
-Looking at the style of classic superhero comics you see that they have a lot of energy. Through the fonts and the language a strong and positive emotion is projected to the readers. 
+Looking at the style of classic superhero comics I saw that they had a lot of energy. Through the fonts and the language a strong and positive emotion is projected to the readers. 
 
 ### Mock ups
 In Adobe XD I created some wire frames and explored the functionality of the website. 
@@ -94,104 +121,128 @@ Time was on my mind throughout the sites development, with design and functional
 ### Userstories and sprints
 I implemented userstories for every step of the frontend development of this project. The main project [can be viewed here.](https://github.com/users/andrewcargill/projects/8)
 
-#### Sprints
-|Date|Sprint|Userstories|
-|---|---|---|
-|16.12.22|Site setup|[site set up](https://github.com/andrewcargill/superheros/issues/7) |
-|||[Basic Deployment](https://github.com/andrewcargill/superheros/issues/8) |
-|||[Basic styling of site](https://github.com/andrewcargill/superheros/issues/9) |
-|||[Navigation routing](https://github.com/andrewcargill/superheros/issues/10) |
-|16.12.22|API|[Connect API](https://github.com/andrewcargill/superheros/issues/12) |
-|||[Create Sign up form](https://github.com/andrewcargill/superheros/issues/11) |
-|||[User can sign up](https://github.com/andrewcargill/superheros/issues/13) |
-|||[Basic styling of site](https://github.com/andrewcargill/superheros/issues/9) |
-|17.12.22|User login|[User login](https://github.com/andrewcargill/superheros/issues/15) |
-|||[Navigation](https://github.com/andrewcargill/superheros/issues/17) |
-|||[User logout](https://github.com/andrewcargill/superheros/issues/16) |
-|||[Styling of sign up form](https://github.com/andrewcargill/superheros/issues/14) |
-|17.12.22|Landing page|[Landing page](https://github.com/andrewcargill/superheros/issues/18) |
-|||[Navigation](https://github.com/andrewcargill/superheros/issues/17) |
-|||[User logout](https://github.com/andrewcargill/superheros/issues/16) |
-|||[Sign up styling](https://github.com/andrewcargill/superheros/issues/14) |
-|17.12.22|Create Post|[Create a post](https://github.com/andrewcargill/superheros/issues/22) |
-|||[styling of sign up form](https://github.com/andrewcargill/superheros/issues/14) |
-|||[Flesh out signed out landing page](https://github.com/andrewcargill/superheros/issues/20) |
-|18.12.22|Comments|[Create comment](https://github.com/andrewcargill/superheros/issues/27) |
-|||[Skeleton Post Comments List](https://github.com/andrewcargill/superheros/issues/25) |
-|||[Styling of sign up form](https://github.com/andrewcargill/superheros/issues/14) |
-|||[Flesh out sign out landing page](https://github.com/andrewcargill/superheros/issues/20) |
-|19.12.22|API fix|[API crash on comments](https://github.com/andrewcargill/superheros/issues/31) |
-|||[Create Comment](https://github.com/andrewcargill/superheros/issues/27) |
-|||[Skeleton Post Comments list](https://github.com/andrewcargill/superheros/issues/25) |
-|||[Styling of sign up form](https://github.com/andrewcargill/superheros/issues/14) |
-|19.12.22|Profiles|[view all and single profiles](https://github.com/andrewcargill/superheros/issues/36) |
-|||[view single super power](https://github.com/andrewcargill/superheros/issues/34) |
-|||[Owner can edit super power](https://github.com/andrewcargill/superheros/issues/35) |
-|||[Styling of sign up form](https://github.com/andrewcargill/superheros/issues/14) |
-|19.12.22|Profiles and super powers|[Skeleton list view of profiles](https://github.com/andrewcargill/superheros/issues/39) |
-|||[View single super power](https://github.com/andrewcargill/superheros/issues/34) |
-|||[Owner can edit super powers](https://github.com/andrewcargill/superheros/issues/40) |
-|||[Styling of sign up form](https://github.com/andrewcargill/superheros/issues/14) |
-|19.12.22|Navigation|[Navigation triggering](https://github.com/andrewcargill/superheros/issues/42) |
-|||[List of super powers](https://github.com/andrewcargill/superheros/issues/35) |
-|||[Styling of sign up form](https://github.com/andrewcargill/superheros/issues/14) |
-|||[Flesh out signed out landing page](https://github.com/andrewcargill/superheros/issues/20) |
-|20.12.22|Landing page / create post|[Flesh out landing page](https://github.com/andrewcargill/superheros/issues/20) |
-|||[Flesh out create post view](https://github.com/andrewcargill/superheros/issues/48) |
-|||[Owner can edit/ delete Comments](https://github.com/andrewcargill/superheros/issues/45) |
-|||[Fleshing out sign up form](https://github.com/andrewcargill/superheros/issues/47) |
-|||[Fleshing out post components](https://github.com/andrewcargill/superheros/issues/47) |
-|20.12.22|General|[Navigation background](https://github.com/andrewcargill/superheros/issues/29) |
-|||[Fleshing out of sign in form](https://github.com/andrewcargill/superheros/issues/47) |
-|||[Fleshing out of post components](https://github.com/andrewcargill/superheros/issues/28) |
-|||[Fleshing out of sign up form](https://github.com/andrewcargill/superheros/issues/14) |
-|21.12.22|Side container|[Sidebar - Skeleton](https://github.com/andrewcargill/superheros/issues/53) |
-|||[Fleshing out sign up form](https://github.com/andrewcargill/superheros/issues/47) |
-|||[BUG: Fix filters on API (Comments/posts)](https://github.com/andrewcargill/superheros/issues/32) |
-|||[BUG: Updating post image crashing](https://github.com/andrewcargill/superheros/issues/26) |
-|21.12.22|API fix|[BUG: Fix filters on API](https://github.com/andrewcargill/superheros/issues/32) |
-|||[BUG: Pagination on post list](https://github.com/andrewcargill/superheros/issues/33) |
-|||[BUG: Posts - Username link color](https://github.com/andrewcargill/superheros/issues/54) |
-|||[BUG: Owner image not showing in powers list view](https://github.com/andrewcargill/superheros/issues/43) |
-|22.12.22|Styling|[Fleshing out of sign up form](https://github.com/andrewcargill/superheros/issues/14) |
-|||[Profile view displays powers](https://github.com/andrewcargill/superheros/issues/51) |
-|||[BUG: Profile edit - updating image causes crash](https://github.com/andrewcargill/superheros/issues/38) |
-|||[BUG: Change naming on profile usestate](https://github.com/andrewcargill/superheros/issues/37) |
-|22.12.22|Various|[BUG: Stlying of powers search for small devices](https://github.com/andrewcargill/superheros/issues/55) |
-|||[BUG: API admin view 'powers'](https://github.com/andrewcargill/superheros/issues/30) |
-|||[BUG: Post page - Comments not wrapping](https://github.com/andrewcargill/superheros/issues/52) |
-|||[BUG: Create Post - Center input field/ image sizing](https://github.com/andrewcargill/superheros/issues/49) |
-|22.12.22|Styling|[Fleshing out sign up form](https://github.com/andrewcargill/superheros/issues/14) |
-|||[Profile view displays powers](https://github.com/andrewcargill/superheros/issues/51) |
-|||[BUG: Profile edit form](https://github.com/andrewcargill/superheros/issues/38) |
-|||[BUG: Profile edit useState](https://github.com/andrewcargill/superheros/issues/37) |
-|23.12.22|Various|[BUG: Updating post image](https://github.com/andrewcargill/superheros/issues/26) |
-|||[Powers - User can see top list of powers](https://github.com/andrewcargill/superheros/issues/50) |
-|||[BUG: Username color on posts](https://github.com/andrewcargill/superheros/issues/54) |
-|||[BUG: Post edit view image update crash](https://github.com/andrewcargill/superheros/issues/38) |
-|23.12.22|Navigation|[Update navigation](https://github.com/andrewcargill/superheros/issues/57) |
-|||[Sign in - help text](https://github.com/andrewcargill/superheros/issues/60) |
-|||[Sidebar search user](https://github.com/andrewcargill/superheros/issues/61) |
-|||[Fleshing out Profile page](https://github.com/andrewcargill/superheros/issues/56) |
-|25.12.22|Various|[Fleshing out of powers edit view](https://github.com/andrewcargill/superheros/issues/64) |
-|||[Flesh out single post view](https://github.com/andrewcargill/superheros/issues/59) |
-|||[BUGS: Post - username link color](https://github.com/andrewcargill/superheros/issues/54) |
-|||[BUG: useState profile edit form](https://github.com/andrewcargill/superheros/issues/37) |
-|26.12.22|Hero Search|[Fleshing out hero search](https://github.com/andrewcargill/superheros/issues/68) |
-|||[Styling: Post Page](https://github.com/andrewcargill/superheros/issues/52) |
-|||[BUG: posts username link color](https://github.com/andrewcargill/superheros/issues/54) |
-|26.12.22|Styling|[Edit post buttons](https://github.com/andrewcargill/superheros/issues/66) |
-|||[Buttons on profile update view](https://github.com/andrewcargill/superheros/issues/65) |
-|||[BUG: Create post - Center input field](https://github.com/andrewcargill/superheros/issues/49) |
-|||[BUG: Posts user name link color](https://github.com/andrewcargill/superheros/issues/54) |
-|26.12.22|Various|[Updating post image not working](https://github.com/andrewcargill/superheros/issues/26) |
-|||[Posts: Username link color](https://github.com/andrewcargill/superheros/issues/54) |
-|||[Profile edit view - useState naming](https://github.com/andrewcargill/superheros/issues/37) |
-|27.12.22|Styling|[Formatting: Wrap caption text on posts](https://github.com/andrewcargill/superheros/issues/70) |
-|||[BUG: Investigate instability of site](https://github.com/andrewcargill/superheros/issues/72) |
-|||[Formatting: Image centered on post/ profile edit forms](https://github.com/andrewcargill/superheros/issues/71) |
-|||[Loading icon on posts view page](https://github.com/andrewcargill/superheros/issues/62) |
+For reference here are the original project goals:
+<details><summary>
+Original Project Goals (Set during planning stage of project)
+</summary>
 
+|Ref No.|Goal|Description|
+|---|---|---|
+|1|Log in/log out/Sign up | User can create an account and login or log out|
+|2|Posts page styled with SuperHero theme | A responsive homepage with post CRUD functionality|
+|3|Comments | Comments for each post with CRUD functionality|
+|4|Profiles (Created on new account) | Profiles with full CRUD Functionality |
+|5|Powers (Created on new account) | Powers for each User with full CRUD Functionality |
+|6| Powers search and rating | Powers can be searched via a drop down menu |
+|7| Site styled in strong comic-book styling | A design theme that runs consistently across the site |
+|8| Front-end react website and custom built API| Hosted on Heroku |
+|9| Deployment of final website to Heroku | Upon project completion | 
+|10| Document all known bugs and issues | Ensure documentation is clear and honest |
+ </details>
+
+Within the dropdown I have detailed all sprints, linked to Userstories and Project Goals
+ <details><summary>
+Sprints
+</summary>
+
+|Date|Sprint|Project Goal Ref No:|Userstories|
+|---|---|---|---|
+|16.12.22|Site setup|8|[site set up](https://github.com/andrewcargill/superheros/issues/7) |
+|||8|[Basic Deployment](https://github.com/andrewcargill/superheros/issues/8) |
+|||7|[Basic styling of site](https://github.com/andrewcargill/superheros/issues/9) |
+|||7|[Navigation routing](https://github.com/andrewcargill/superheros/issues/10) |
+|16.12.22|API|8|[Connect API](https://github.com/andrewcargill/superheros/issues/12) |
+|||1|[Create Sign up form](https://github.com/andrewcargill/superheros/issues/11) |
+|||1|[User can sign up](https://github.com/andrewcargill/superheros/issues/13) |
+|||7|[Basic styling of site](https://github.com/andrewcargill/superheros/issues/9) |
+|17.12.22|User login|1|[User login](https://github.com/andrewcargill/superheros/issues/15) |
+|||7|[Navigation](https://github.com/andrewcargill/superheros/issues/17) |
+|||1|[User logout](https://github.com/andrewcargill/superheros/issues/16) |
+|||7|[Styling of sign up form](https://github.com/andrewcargill/superheros/issues/14) |
+|17.12.22|Landing page|2|[Landing page](https://github.com/andrewcargill/superheros/issues/18) |
+|||7|[Navigation](https://github.com/andrewcargill/superheros/issues/17) |
+|||1|[User logout](https://github.com/andrewcargill/superheros/issues/16) |
+|||7|[Sign up styling](https://github.com/andrewcargill/superheros/issues/14) |
+|17.12.22|Create Post|2|[Create a post](https://github.com/andrewcargill/superheros/issues/22) |
+|||1|[styling of sign up form](https://github.com/andrewcargill/superheros/issues/14) |
+|||1|[Flesh out signed out landing page](https://github.com/andrewcargill/superheros/issues/20) |
+|18.12.22|Comments|3|[Create comment](https://github.com/andrewcargill/superheros/issues/27) |
+|||3|[Skeleton Post Comments List](https://github.com/andrewcargill/superheros/issues/25) |
+|||1|[Styling of sign up form](https://github.com/andrewcargill/superheros/issues/14) |
+|||1|[Flesh out sign out landing page](https://github.com/andrewcargill/superheros/issues/20) |
+|19.12.22|API fix|8|[API crash on comments](https://github.com/andrewcargill/superheros/issues/31) |
+|||3|[Create Comment](https://github.com/andrewcargill/superheros/issues/27) |
+|||3|[Skeleton Post Comments list](https://github.com/andrewcargill/superheros/issues/25) |
+|||1|[Styling of sign up form](https://github.com/andrewcargill/superheros/issues/14) |
+|19.12.22|Profiles|4|[view all and single profiles](https://github.com/andrewcargill/superheros/issues/36) |
+|||6|[view single super power](https://github.com/andrewcargill/superheros/issues/34) |
+|||6|[Owner can edit super power](https://github.com/andrewcargill/superheros/issues/35) |
+|||1|[Styling of sign up form](https://github.com/andrewcargill/superheros/issues/14) |
+|19.12.22|Profiles and super powers|6|[Skeleton list view of profiles](https://github.com/andrewcargill/superheros/issues/39) |
+|||6|[View single super power](https://github.com/andrewcargill/superheros/issues/34) |
+|||6|[Owner can edit super powers](https://github.com/andrewcargill/superheros/issues/40) |
+|||7|[Styling of sign up form](https://github.com/andrewcargill/superheros/issues/14) |
+|19.12.22|Navigation|7|[Navigation triggering](https://github.com/andrewcargill/superheros/issues/42) |
+|||6|[List of super powers](https://github.com/andrewcargill/superheros/issues/35) |
+|||1|[Styling of sign up form](https://github.com/andrewcargill/superheros/issues/14) |
+|||1|[Flesh out signed out landing page](https://github.com/andrewcargill/superheros/issues/20) |
+|20.12.22|Landing page / create post|*See Ref*|[Flesh out landing page](https://github.com/andrewcargill/superheros/issues/20) |
+|||2|[Flesh out create post view](https://github.com/andrewcargill/superheros/issues/48) |
+|||3|[Owner can edit/ delete Comments](https://github.com/andrewcargill/superheros/issues/45) |
+|||7|[Fleshing out sign up form](https://github.com/andrewcargill/superheros/issues/47) |
+|||7|[Fleshing out post components](https://github.com/andrewcargill/superheros/issues/47) |
+|20.12.22|General|7|[Navigation background](https://github.com/andrewcargill/superheros/issues/29) |
+|||7|[Fleshing out of sign in form](https://github.com/andrewcargill/superheros/issues/47) |
+|||7|[Fleshing out of post components](https://github.com/andrewcargill/superheros/issues/28) |
+|||7|[Fleshing out of sign up form](https://github.com/andrewcargill/superheros/issues/14) |
+|21.12.22|Side container|7|[Sidebar - Skeleton](https://github.com/andrewcargill/superheros/issues/53) |
+|||7|[Fleshing out sign up form](https://github.com/andrewcargill/superheros/issues/47) |
+|||10|[BUG: Fix filters on API (Comments/posts)](https://github.com/andrewcargill/superheros/issues/32) |
+|||10|[BUG: Updating post image crashing](https://github.com/andrewcargill/superheros/issues/26) |
+|21.12.22|API fix|10|[BUG: Fix filters on API](https://github.com/andrewcargill/superheros/issues/32) |
+|||10|[BUG: Pagination on post list](https://github.com/andrewcargill/superheros/issues/33) |
+|||10|[BUG: Posts - Username link color](https://github.com/andrewcargill/superheros/issues/54) |
+|||10|[BUG: Owner image not showing in powers list view](https://github.com/andrewcargill/superheros/issues/43) |
+|22.12.22|Styling|7|[Fleshing out of sign up form](https://github.com/andrewcargill/superheros/issues/14) |
+|||5|[Profile view displays powers](https://github.com/andrewcargill/superheros/issues/51) |
+|||10|[BUG: Profile edit - updating image causes crash](https://github.com/andrewcargill/superheros/issues/38) |
+|||10|[BUG: Change naming on profile usestate](https://github.com/andrewcargill/superheros/issues/37) |
+|22.12.22|Various|10|[BUG: Stlying of powers search for small devices](https://github.com/andrewcargill/superheros/issues/55) |
+|||8|[BUG: API admin view 'powers'](https://github.com/andrewcargill/superheros/issues/30) |
+|||10|[BUG: Post page - Comments not wrapping](https://github.com/andrewcargill/superheros/issues/52) |
+|||10|[BUG: Create Post - Center input field/ image sizing](https://github.com/andrewcargill/superheros/issues/49) |
+|22.12.22|Styling|7|[Fleshing out sign up form](https://github.com/andrewcargill/superheros/issues/14) |
+|||5|[Profile view displays powers](https://github.com/andrewcargill/superheros/issues/51) |
+|||10|[BUG: Profile edit form](https://github.com/andrewcargill/superheros/issues/38) |
+|||10|[BUG: Profile edit useState](https://github.com/andrewcargill/superheros/issues/37) |
+|23.12.22|Various|10|[BUG: Updating post image](https://github.com/andrewcargill/superheros/issues/26) |
+|||5|[Powers - User can see top list of powers](https://github.com/andrewcargill/superheros/issues/50) |
+|||10|[BUG: Username color on posts](https://github.com/andrewcargill/superheros/issues/54) |
+|||10|[BUG: Post edit view image update crash](https://github.com/andrewcargill/superheros/issues/38) |
+|23.12.22|Navigation|7|[Update navigation](https://github.com/andrewcargill/superheros/issues/57) |
+|||1|[Sign in - help text](https://github.com/andrewcargill/superheros/issues/60) |
+|||6|[Sidebar search user](https://github.com/andrewcargill/superheros/issues/61) |
+|||4|[Fleshing out Profile page](https://github.com/andrewcargill/superheros/issues/56) |
+|25.12.22|Various|5|[Fleshing out of powers edit view](https://github.com/andrewcargill/superheros/issues/64) |
+|||2|[Flesh out single post view](https://github.com/andrewcargill/superheros/issues/59) |
+|||10|[BUGS: Post - username link color](https://github.com/andrewcargill/superheros/issues/54) |
+|||10|[BUG: useState profile edit form](https://github.com/andrewcargill/superheros/issues/37) |
+|26.12.22|Hero Search|6|[Fleshing out hero search](https://github.com/andrewcargill/superheros/issues/68) |
+|||7|[Styling: Post Page](https://github.com/andrewcargill/superheros/issues/52) |
+|||10|[BUG: posts username link color](https://github.com/andrewcargill/superheros/issues/54) |
+|26.12.22|Styling|7|[Edit post buttons](https://github.com/andrewcargill/superheros/issues/66) |
+|||7|[Buttons on profile update view](https://github.com/andrewcargill/superheros/issues/65) |
+|||10|[BUG: Create post - Center input field](https://github.com/andrewcargill/superheros/issues/49) |
+|||10|[BUG: Posts user name link color](https://github.com/andrewcargill/superheros/issues/54) |
+|26.12.22|Various|10|[Updating post image not working](https://github.com/andrewcargill/superheros/issues/26) |
+|||7|[Posts: Username link color](https://github.com/andrewcargill/superheros/issues/54) |
+|||4|[Profile edit view - useState naming](https://github.com/andrewcargill/superheros/issues/37) |
+|27.12.22|Styling|7|[Formatting: Wrap caption text on posts](https://github.com/andrewcargill/superheros/issues/70) |
+|||10|[BUG: Investigate instability of site](https://github.com/andrewcargill/superheros/issues/72) |
+|||7|[Formatting: Image centered on post/ profile edit forms](https://github.com/andrewcargill/superheros/issues/71) |
+|||7|[Loading icon on posts view page](https://github.com/andrewcargill/superheros/issues/62) |
+
+</details>
 
 ## Testing
 
