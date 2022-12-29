@@ -5,7 +5,7 @@ The context is that the 'World Government Agency' has hidden a top-secret websit
 
 Once inside the Comic-book styled environment makes for a fun place where these saviours of the world can hang-out and unwind. 
 
-![alt text](../superheros/src/assets/readme/readme_app.jpg)
+![Picture of website on various screen sizes](../superheros/src/assets/readme/readme_app.jpg)
 
 ## Contents
 - [Project Goals](#project-goals)
@@ -46,29 +46,35 @@ A site that can only be accessed via login and provides users with the features 
 
 
 ## Features
+
 ### Landing page
+![image of landing page](../superheros/src/assets/readme/readme_landingpage.jpg)
 - Styled to give the feel of a government database login
 - user can only login from this screen
 - user of flashing button for added drama
 
 ### Login in
+![screengrab of sign in and sign up](../superheros/src/assets/readme/readme_signinup.jpg)
 - User enters the comic-styled world. 
 - strong visual identity and comic book text language
 - User has option to create an account
 
 ### Home screen
+![screen grab of posts](../superheros/src/assets/readme/readme_posts.jpg)
 - Lists all posts 
 - Shake effect on Username
 - Hero Search side panel (top panel on mobile view)
 - Independent scrolling of the post and hero search components
 
 ### Post view
+![screen grab of post view](../superheros/src/assets/readme/readme_post.jpg)
 - Constant styling message
 - Owner can choose to edit or delete post
 - Comments have full CRUD functionality 
 - Posts have full CRUD functionality
 
 ### Profile view
+![screen grab of profile view](../superheros/src/assets/readme/readme_profile.jpg)
 - Find out more about the superhero 
 - Owner can edit the profile and powers
 
