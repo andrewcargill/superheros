@@ -5,6 +5,19 @@ The context is that the 'World Government Agency' has hidden a top-secret websit
 
 Once inside the Comic-book styled environment makes for a fun place where these saviours of the world can hang-out and unwind. 
 
+![alt text](../superheros/src/assets/readme/readme_app.jpg)
+
+## Contents
+- [Project Goals](#project-goals)
+- [Features](#features)
+- [UX Design](#ux-design)
+- [Development](#development)
+- [Testing](#testing)
+- [Bugs](#bugs)
+- [Deployment](#deployment)
+- [Future Development](#future-development)
+- [Credits](#credits-and-acknowledgement)
+
 ## Project Goals
 A react frontend website and django backend API. Linked together to provide full CRUD functionality. 
 
@@ -117,6 +130,9 @@ Time was on my mind throughout the sites development, with design and functional
 - Two main CSS files are reused across the site.
     - App.module.css : Contains all fonts
     - Containers.module.css : Contains all content containers
+
+### Front-End Libraries
+The main library used in this site is Bootstrap 4. This was used in combination with custom CSS to provide the styling and overall functionality of the site. 
 
 ### Userstories and sprints
 I implemented userstories for every step of the frontend development of this project. The main project [can be viewed here.](https://github.com/users/andrewcargill/projects/8)
@@ -245,13 +261,8 @@ Sprints
 </details>
 
 ## Testing
-
-<details><summary>
-Front End Manual Testing
-</summary>
-
-
-
+Extensive manual testing has been carried out on both the Frontend and Backend elements of this project. Any bugs that were found have been document in the results and are details in the [Bugs section](#bugs) of this documentation.
+<details><summary>Front End Manual Testing</summary>
 
 |Page|State|Test|Result
 |---|---|---|---|
@@ -382,70 +393,4 @@ Backend Manual Testing
 - City Major login - They can reward superheros with money and also add posts that link to specific Superheros
 - Public login - They can rate superheros and send fan-mail (direct messages to Superheros) 
 
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Credits and acknowledgement 
