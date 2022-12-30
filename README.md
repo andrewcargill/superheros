@@ -73,7 +73,7 @@ A site that can only be accessed via login and provides users with the features 
 - user of flashing button for added drama
 
 ### Login in
-![screengrab of sign in and sign up](../superheros/src/assets/readme/readme_signinup.jpg)
+![screen grab of sign in and sign up](../superheros/src/assets/readme/readme_signinup.jpg)
 - User enters the comic-styled world. 
 - strong visual identity and comic book text language
 - User has option to create an account
@@ -115,9 +115,9 @@ I knew it was going to be a basic post, comments and profile react website, but 
 Looking at the style of classic superhero comics I saw that they had a lot of energy. Through the fonts and the language a strong and positive emotion is projected to the readers. 
 
 ### Mock ups
-In Adobe XD I created some wire frames and explored the functionality of the website. 
+In Adobe XD I created some wire frames and explored the functionality of the website. I planned out the site in detail and also planned the CSS containers and fonts. This planning really saved me time during the main production stage of the project as I was able to focus on the functional coding and not be distracted by responsive design and styling problems/ challenges.
 
---INSERT IMAGES
+![wire frames](../superheros/src/assets/readme/readme_wireframe.jpg)
 
 ### Colors
 
@@ -137,7 +137,9 @@ In Adobe XD I created some wire frames and explored the functionality of the web
 |[font-family: courier-std, monospace;](https://github.com/andrewcargill/superheros/blob/23969f79fd8e7012b0bf0574c454119024858f7b/src/App.module.css#L35)|Terminal: Used on the landing page and powers edit view. This is the cold voice of 'authority' |
 
 ### Tables and Databases
-INSERT IMAGES OF TABLES
+![wire frames](../superheros/src/assets/readme/readme_models.jpg)
+
+Profiles and Powers are automatically created when a new user is added. The comments model links to the posts model. 
 
 ### Diagrams to implementation 
 This is how the planned site evolved into the developed site.
@@ -164,7 +166,6 @@ Time was on my mind throughout the sites development, with design and functional
 
 ### Front-End Libraries
 The main library used in this site is React. 
----REF LINK FROM MAT---
 
 Bootstrap 4 was used in combination with custom CSS to provide the styling and overall functionality of the site. 
 
@@ -298,6 +299,11 @@ Sprints
 
 ## Testing
 Extensive manual testing has been carried out on both the Frontend and Backend elements of this project. Any bugs that were found have been document in the results and are details in the [Bugs section](#bugs) of this documentation.
+
+All Python, Javascript and CSS code has passed code checkers. The Lighthouse scored well - but did highlight some problems with, what seems like, the use of Bootstrap within the site. 
+
+![wire frames](../superheros/src/assets/readme/readme_lighthouse.jpg)
+
 <details><summary>Front End Manual Testing</summary>
 
 |Page|State|Test|Result
@@ -409,7 +415,6 @@ Backend Manual Testing
 ||/powers/:id shows single power|PASS|
 ||/admin/ allows superuser to login|PASS|
 ||/admin/ basic admin view and functions|PASS|
-
 |Dev site|/posts/ show pagination|PASS|
 ||/comments/ show pagination|PASS|
 ||/powers/ show pagination|PASS|
@@ -420,6 +425,11 @@ Backend Manual Testing
 </details>
 
 ---
+
+## Challenges
+- I have never created a project under, what felt like, such a time constant. To complete all the React tutorials and then head into this project with the clock ticking was a big thing to manage. I knew that this was only going to be possible if my time was planned well and if, in my mind, I was able to settle for 80% being fine. This was hard for me as I am naturally driven to do my best and always push to try and achieve great results, but for this project it was about something different. The ability to read the requirements and make a MVP that would pass. 
+- Planning the styling of the project during the UX design stage helped me a lot. As mentioned earlier, I planned the CSS and HTML code for styling the site during this stage so that the styling during the actual production of the site was easier and required less decision making.
+- At first I created the API without filters and then when I came to building the comments component and trying to link it to the posts, I realized that it was the API that would be doing the filtering (I originally thought that this could be achieved on the front end by just adding some Javascript, but then realized that this was a bad idea. If this was a site with thousands of users it would not be efficient and would make the site extremely slow). 
 
 ## Bugs
 
@@ -439,6 +449,25 @@ Backend Manual Testing
 ---
 
 ## Deployment
+This site is deployed via two Heroku apps. One for the API and the other for the front end React site. Getting the two connected can take some time, but below are some guidelines to get you started. 
+
+Should you require any help please email me: andycargill01@aol.com
+
+### API
+You will need a Cloudinary account and Heroku account
+ - Create a new app in Heroku
+ - Within 'Config Var': 
+    - Add the link to Cloudinary
+    - Add the address to your Heroku live app 
+    - Deploy from the github repository
+
+### Front End
+You will need a Heroku account 
+- Create a new app in Heroku
+- Within 'Config Var': 
+    - Link to the API
+    - Link to ..... 
+
 
 ----
 
