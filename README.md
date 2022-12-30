@@ -41,7 +41,7 @@ A site that can only be accessed via login and provides users with the features 
 ### The factors in setting these goals:
 - Project submission deadline (Production time of 2 weeks).
 - Entry level knowledge and understanding of creating a React frontend and API backend.
-- This project feel over the Christmas and New Year period so there was no access to Mentor support and limited access to tutor support. 
+- This project fell over the Christmas and New Year period so there was no access to Mentor support and limited access to tutor support. 
 
 ### Project goals:
 
@@ -106,7 +106,7 @@ Due to how the course has been structured I had two weeks to create a project th
 
 I had not worked with React before and had limited knowledge of creating an Django API that linked to a React repository. Time would need to be allocated to ensure this basic function, of the backend talking to the frontend, worked well.
 
-This formed the hard-lines around my thinking in the UX Design process. This needed to be a simple site with a strong design and basic functionality. Sometime that could be expanded on in the future so that the site could develop into a strong portfolio project. 
+This formed the hard-lines around my thinking in the UX Design process. This needed to be a simple site with a strong design and basic functionality. A project that could be expanded on in the future so that the site could develop into a strong portfolio project. 
 
 ### Why SuperHeros?
 I knew it was going to be a basic post, comments and profile react website, but I did not want to create a generic social media site. This theme enabled me to show a different design style from my pervious portfolio projects.
@@ -141,7 +141,8 @@ INSERT IMAGES OF TABLES
 
 ### Diagrams to implementation 
 This is how the planned site evolved into the developed site.
-Time was on my mind throughout the sites development, with design and functionality choices and sacrifices constantly being made, to ensure the project stayed on track and that a finished site was live by the deadline date.
+Time was on my mind throughout the sites development, with design and functionality choices and sacrifices constantly being made, in an agile fashion, to ensure the project stayed on track and that a finished site was live by the deadline date.
+
 
 |Planned|Finished Site|Comment|
 |---|---|---|
@@ -162,10 +163,13 @@ Time was on my mind throughout the sites development, with design and functional
     - Containers.module.css : Contains all content containers
 
 ### Front-End Libraries
-The main library used in this site is Bootstrap 4. This was used in combination with custom CSS to provide the styling and overall functionality of the site. 
+The main library used in this site is React. 
+---REF LINK FROM MAT---
 
-### Userstories and sprints
-I implemented userstories for every step of the frontend development of this project. The main project [can be viewed here.](https://github.com/users/andrewcargill/projects/8)
+Bootstrap 4 was used in combination with custom CSS to provide the styling and overall functionality of the site. 
+
+### User stories and sprints
+I implemented user stories for every step of the frontend development of this project. The main project [can be viewed here.](https://github.com/users/andrewcargill/projects/8)
 
 For reference here are the original project goals:
 <details><summary>
