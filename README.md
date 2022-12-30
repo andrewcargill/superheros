@@ -311,8 +311,7 @@ Extensive manual testing has been carried out on both the Frontend and Backend e
 ||Not signed in|Enter wrong details - Error feedback|PASS|
 ||Not signed in|Responsive mobile > desktop|PASS|
 ||On sign in|home view loaded|PASS|
-|Sign up|||PASS|
-||Not signed in|'sign in' link > sign in view|PASS|
+|Sign up|Not signed in|'sign in' link > sign in view|PASS|
 ||Not signed in|Feedback on none-unique name|PASS|
 ||Not signed in|Feedback on password criteria|PASS|
 ||Successful sign up|Taken to home view|PASS|
@@ -343,7 +342,7 @@ Extensive manual testing has been carried out on both the Frontend and Backend e
 ||Signed in but not post owner|Clicked on post owner name loads post owners profile view|PASS|
 ||Signed in and Post owner|Post displayed with edit options|PASS|
 ||Signed in and Post owner|Post can be deleted|PASS|
-||Signed in and Post owner|Post 'edit' loaded edit view|!BUG|
+||Signed in and Post owner|Post 'edit' loaded edit view|[!BUG](#post-edit-bug)|
 |||BUG: Sometimes takes you back to home||
 ||Signed in and Post owner|Clicked on username loads correct user profile|PASS|
 |Comments|Signed in|If no comments - correct message shown|PASS|
@@ -357,12 +356,12 @@ Extensive manual testing has been carried out on both the Frontend and Backend e
 |Post edit|Signed in|Caption loads in edit view|PASS|
 ||Signed in|Caption only updates on 'update'|PASS|
 ||Signed in|'Cancel' returns to post|PASS|
-||Signed in|Image updates and saves|!BUG|
+||Signed in|Image updates and saves|[!BUG](#image-upload-bug)|
 |||BUG: .JPG files work. Some PNG do not||
 ||Signed in|Responsive mobile > desktop|PASS|
 |Add post|Signed in|Responsive mobile > desktop|PASS|
 ||Signed in|Correct username shown on post save|PASS|
-||Signed in|Uploading image|!BUG|
+||Signed in|Uploading image|[!BUG](#image-upload-bug)|
 |||BUG: .JPG files work. Some PNG do not||
 ||Signed in|Caption added and saved|PASS|
 ||Signed in|Default image if no image|PASS|
@@ -372,14 +371,14 @@ Extensive manual testing has been carried out on both the Frontend and Backend e
 ||Signed in and owner|edit options displayed|PASS|
 ||Signed in|User cannot delete post|PASS|
 |Profile Edit|Signed in|Responsive mobile > desktop|PASS|
-||Signed in and Profile owner|Profile 'edit' loaded edit view|!BUG|
+||Signed in and Profile owner|Profile 'edit' loaded edit view|[!BUG](#profile-edit-bug)|
 |||BUG: Sometimes takes you back to home||
-||Signed in and Profile owner|Bio text is shown|!BUG|
+||Signed in and Profile owner|Bio text is shown|[!BUG](#profile-edit-bug)|
 |||No text is shown||
-||Signed in and Profile owner|Current image shown|!BUG|
+||Signed in and Profile owner|Current image shown|[!BUG](#profile-edit-bug)|
 ||Signed in and Profile owner|User can update bio|PASS|
 ||Signed in and Profile owner|User can update image|PASS|
-|||JPG files are fine. Some PNG cause crash||
+|||JPG files are fine. Some PNG cause crash|[!BUG](#image-upload-bug)|
 ||Signed in and Profile owner|Cancel returns to Profile view|PASS|
 ||Signed in and Profile owner|Update saves and returns to Profile view|PASS|
 |Powers Edit|Signed in and owner|Edit dropdown visible via profile view|PASS|
@@ -424,6 +423,19 @@ Backend Manual Testing
 
 ## Bugs
 
+- #### POST EDIT BUG
+    - Sometimes the post edit button takes you back to the home page. I think this could be something connected to the user tokens.
+- #### PROFILE EDIT BUG
+    - The edit window shows the default image instead of existing image. I think this is a fault in the code and with a little more time I would compare the 'edit post' code against the 'profile edit' code and see what track down the problem. 
+    - The edit view does not load the existing 'bio' text. Again, this could be solved rather easily with a little more time spent on the project. 
+    - Sometimes when going to edit the profile you are returned to Post view. This is a bug I have not been able to track down at the time of submission. 
+- #### USER LOGGED OUT AFTER A SHORT TIME
+    - This is connected to the user tokens. I believe they are running out and not getting renewed.
+
+- #### IMAGE UPLOAD BUG
+    - I spent a lot of time researching this bug. It appears that either Cloudinary or the API prefers .jpg files over .png! After much testing it appears that .jpg files are stable and I cannot get any crashing while using this files format. 
+
+
 ---
 
 ## Deployment
@@ -433,23 +445,17 @@ Backend Manual Testing
 ## Future Development
 - Users can compare the powers of two superheros (along the line of top trumps)
 - City Major login - They can reward superheros with money and also add posts that link to specific Superheros
-- Public login - They can rate superheros and send fan-mail (direct messages to Superheros) 
+- General Public login - They can rate superheros and send fan-mail (direct messages to Superheros) 
 ---
 
 ## Credits and acknowledgement 
 
-*https://www.w3docs.com/snippets/css/how-to-create-flashing-glowing-button-using-animation-in-css3.html
+This project was created by myself with no assistance from others. I took very little, if any, tutor or mentor support for this project. Images used on the website are from googles search engine and below are the additional code used in the project.
 
-Glowing buttons
+- Glowing buttons -  [w3docs.com](https://www.w3docs.com/snippets/css/how-to-create-flashing-glowing-button-using-animation-in-css3.html)
 
-https://www.geeksforgeeks.org/how-to-fixed-one-column-and-scrollable-other-column-or-columns-in-bootstrap
+- Scrolling of components within containers - [geeksforgeeks.org](https://www.geeksforgeeks.org/how-to-fixed-one-column-and-scrollable-other-column-or-columns-in-bootstrap)
 
-Scrolling
+- Blur effect used on navigation component - [mozilla.org](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter)
 
-https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter
-
-Blur effect on navigation
-
-Shake effect - css.tricks
-
-Shack effect
+- Shake effect used on Hero usernames on Posts view - [css.tricks](https://css-tricks.com/snippets/css/shake-css-keyframe-animation/)
