@@ -14,7 +14,6 @@ const LandingPage = () => {
   const loggedOutLanding = (
     <div className={styles.Styles}>
       <Row>
-
         <Container className="container-md">
           <Container
             className={`${frame.ContainerBlackBorder} ${frame.FlexHeight} container-md justify-content-center`}
@@ -62,7 +61,7 @@ const LandingPage = () => {
   );
 
   return (
-    // Shows logo is user is not logged in
+    // Shows logo if user is not logged in
 
     <div>{currentUser ? loggedInLanding : loggedOutLanding}</div>
   );

@@ -5,8 +5,6 @@ import { Container, Row, Media, Card } from "react-bootstrap";
 import Avatar from "../../components/Avatar";
 import { Link } from "react-router-dom";
 
-
-
 function ProfilesPage() {
   const [posts, setPosts] = useState([]);
 
@@ -29,13 +27,9 @@ function ProfilesPage() {
 
   return (
     <div>
-
-      Hello! 
       <div>
         {posts.map((post) => (
           <Container key={post.id}>
-
-        
             <Row>
               <Media className="align-items-center justify-content-between">
                 <Link to={`/profiles/${post.profile_id}`}>
@@ -50,13 +44,8 @@ function ProfilesPage() {
               </Link>
             </Row>
             <div>PROFILE BIO: {post.bio}</div>
-            <div>PROFILE CREATION DATE: {post.created_at}</div>
-            
+            <div>PROFILE CREATION DATE: {post.created_at}</div>    
             {post.updated_at}
-
-          
-
-
           </Container>
         ))}
       </div>

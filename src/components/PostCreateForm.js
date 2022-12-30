@@ -53,7 +53,7 @@ function PostCreateForm() {
 
     formData.append("caption", caption);
     formData.append("image", imageInput.current.files[0]);
-    
+
     try {
       const { data } = await axiosReq.post("/posts/", formData);
       history.push(`/posts/${data.id}`);
@@ -118,39 +118,39 @@ function PostCreateForm() {
                 </Container>
               )}
               <div className="d-flex justify-content-center">
-              <Form.File
-                className={`${appStyles.InfoText}`}
-                id="image-upload"
-                accept="image/*"
-                onChange={handleChangeImage}
-                ref={imageInput}
-              />
+                <Form.File
+                  className={`${appStyles.InfoText}`}
+                  id="image-upload"
+                  accept="image/*"
+                  onChange={handleChangeImage}
+                  ref={imageInput}
+                />
               </div>
             </Form.Group>
-            
-              {errors?.image?.map((message, idx) => (
-                <Alert variant="warning" key={idx}>
-                  {message}
-                </Alert>
-              ))}
-              <Form.Group className="d-flex justify-content-center">
-                <Form.Label className="d-none">Caption</Form.Label>
 
-                <Form.Control
-                  type="text"
-                  name="caption"
-                  className={`${appStyles.InfoText} ${appStyles.Input}`}
-                  placeholder="Add the caption..."
-                  value={caption}
-                  onChange={handleChange}
-                />
-              </Form.Group>
-              {errors?.caption?.map((message, idx) => (
-                <Alert variant="warning" key={idx}>
-                  {message}
-                </Alert>
-              ))}
-            
+            {errors?.image?.map((message, idx) => (
+              <Alert variant="warning" key={idx}>
+                {message}
+              </Alert>
+            ))}
+            <Form.Group className="d-flex justify-content-center">
+              <Form.Label className="d-none">Caption</Form.Label>
+
+              <Form.Control
+                type="text"
+                name="caption"
+                className={`${appStyles.InfoText} ${appStyles.Input}`}
+                placeholder="Add the caption..."
+                value={caption}
+                onChange={handleChange}
+              />
+            </Form.Group>
+            {errors?.caption?.map((message, idx) => (
+              <Alert variant="warning" key={idx}>
+                {message}
+              </Alert>
+            ))}
+
             {/* Two Buttons Layout - Stacks on mobile */}
             <div className="text-center">
               {/* Row with 2 columns - 1 col per button*/}

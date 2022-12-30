@@ -1,16 +1,13 @@
 import React from "react";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Card, Container, Row } from "react-bootstrap";
-
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-
 import { EditDropdown } from "../../components/EditDropdown";
 import appStyles from "../../App.module.css";
 import frame from "../../styles/Containers.module.css";
 
 const Profile = (props) => {
   const { bio, id, owner, image, created_at, profilePage } = props;
-
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
   const history = useHistory();
@@ -38,7 +35,6 @@ const Profile = (props) => {
       <div>
         <p className="text-center text-uppercase"> joined  {created_at} </p>
       </div>
-      {/* is current user the owner? */}
       <Container>
         <Row>
         {is_owner && profilePage && <EditDropdown handleEdit={handleEdit} />}

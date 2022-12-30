@@ -33,7 +33,10 @@ function PostsPage() {
       <Row md={1} sm={1} xs={1} lg={3}>
         {/*SIDE CONTENT*/}
         <Col
-          className={`${frame.Black_}  ${frame.SideContainer}  d-xl-block order-lg-3 col-lg-3`}
+          className={`
+          ${frame.Black_}  
+          ${frame.SideContainer}  
+          d-xl-block order-lg-3 col-lg-3`}
         >
           <ProfileSearch />
         </Col>
@@ -44,7 +47,6 @@ function PostsPage() {
             The latest Hero posts!!
           </h2>
           <Container className={` ${frame.FixedHeight} container-md`}>
-            {/*post content - start*/}
             {posts.results.length ? (
               <InfiniteScroll
                 children={posts.results.map((post) => (
@@ -85,10 +87,9 @@ function PostsPage() {
                 hasMore={!!posts.next}
                 next={() => fetchMoreData(posts, setPosts)}
               />
-            ): 
-            <Asset spinner />
-            }
-            {/*post content - end*/}
+            ) : (
+              <Asset spinner />
+            )}
           </Container>
         </Col>
         {/*SPACER CONTENT*/}

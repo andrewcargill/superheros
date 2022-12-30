@@ -4,8 +4,8 @@ import { Container, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { axiosReq } from "../api/axiosDefaults";
 import { useLocation } from "react-router";
-import styles from "../styles/SearchPowers.module.css"
-import appStyles from "../App.module.css"
+import styles from "../styles/SearchPowers.module.css";
+import appStyles from "../App.module.css";
 
 function ProfileSearch({ filter = "" }) {
   const [profiles, setProfiles] = useState([]);
@@ -38,9 +38,10 @@ function ProfileSearch({ filter = "" }) {
 
   return (
     <div className={`container-md text-center`}>
-      <Form 
+      <Form
         className={styles.Header}
-       onSubmit={(event) => event.preventDefault()}>
+        onSubmit={(event) => event.preventDefault()}
+      >
         <Form.Control
           value={query}
           onChange={(event) => setQuery(event.target.value)}
@@ -55,10 +56,8 @@ function ProfileSearch({ filter = "" }) {
           profiles.results.map((profile) => (
             <Container key={profile.id}>
               <Link to={`/profiles/${profile.id}`}>
-                <span className={appStyles.InfoText}>
-                {profile.owner}
-                </span>
-                </Link>
+                <span className={appStyles.InfoText}>{profile.owner}</span>
+              </Link>
             </Container>
           ))
         ) : (

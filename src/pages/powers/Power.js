@@ -49,7 +49,6 @@ const Power = (props) => {
           </Row>
           <Container>
             <Row className="text-white">
-          {/* is current user the owner? */}
             {is_owner && powerPage && <EditDropdown
              handleEdit={handleEdit} 
              /> }

@@ -6,7 +6,7 @@
   border: 20px;
 }
 
-.post-container {
+/* .post-container {
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -20,7 +20,7 @@
   border-width: 5px;
   border-radius: 20px;
   background-color: white;
-}
+} */
 
 .ContainerBlackBorder {
   border-style: solid;
@@ -38,14 +38,14 @@
   background-color: white;
 }
 
-.content-container-black-border {
+/* .content-container-black-border {
   border-style: solid;
   border-color: white;
   border-width: 5px;
   border-radius: 20px;
   background-color: black;
 
-}
+} */
 
 .ContentToneBorder {
   border-style: solid;
@@ -144,7 +144,7 @@
   margin-top: 3vh;
   margin-bottom: 3vh;
 }
-
+/* 
 .picture-container {
   border-style: solid;
   border-width: 5px;
@@ -191,7 +191,7 @@
 }
 
 /* Testing */
-.Yellow {
+/* .Yellow {
   background-color: #EBE83D;
 }
 
@@ -205,7 +205,7 @@
 
 .Blue {
   background-color: blue;
-}
+} */ 
 
 /*Tablet*/
 @media screen and (max-width: 992px) {

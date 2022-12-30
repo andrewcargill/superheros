@@ -437,3 +437,19 @@ Backend Manual Testing
 ---
 
 ## Credits and acknowledgement 
+
+*https://www.w3docs.com/snippets/css/how-to-create-flashing-glowing-button-using-animation-in-css3.html
+
+Glowing buttons
+
+https://www.geeksforgeeks.org/how-to-fixed-one-column-and-scrollable-other-column-or-columns-in-bootstrap
+
+Scrolling
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter
+
+Blur effect on navigation
+
+Shake effect - css.tricks
+
+Shack effect
