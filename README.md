@@ -1,15 +1,16 @@
 # Hero Chat
-Hero Chat is a fantasy based website where 'want-to-be' superheros can socialize and share posts about their amazing world-saving adventures. This is the first build / release and lays the foundations of a world that will be expanded to include other user types such as 'City Majors' and 'Fans' that will be able to interact are reward Superheros.
+Hero Chat is a fantasy based website where 'want-to-be' superheros can socialize and share posts about their amazing world-saving adventures. This is the first build / release and lays the foundations of a world that will be expanded to include other user types such as 'City Mayors' and 'Fans' that will be able to interact, chat and reward Superheros.
 
-The context is that the 'World Government Agency' has hidden a top-secret website deep in the internet who's location is only known by the worlds Superheros. 
+The context is that the 'World Government Agency' has hidden a top-secret website deep in the internet. This location is only known by the worlds Superheros. 
 
-Once inside the Comic-book styled environment makes for a fun place where these saviours of the world can hang-out and unwind. 
+Once inside the Comic-book styled environment takes over and makes for a fun place where these saviours of the world can hang-out and unwind.
 
 ---
 
 [Visit the website](https://superherosocial.herokuapp.com/)
 
 [Visit the API](https://superheros.herokuapp.com/)
+
 
 
 ---
@@ -36,12 +37,12 @@ Once inside the Comic-book styled environment makes for a fun place where these 
 ## Project Goals
 A react frontend website and django backend API. Linked together to provide full CRUD functionality. 
 
-A site that can only be accessed via login and provides users with the features of creating posts, comments and profiles. 
+A site that is accessed via login and provides users with the features of creating posts and comments and editing their profile and superpowers. 
 
 ### The factors in setting these goals:
 - Project submission deadline (Production time of 2 weeks).
 - Entry level knowledge and understanding of creating a React frontend and API backend.
-- This project fell over the Christmas and New Year period so there was no access to Mentor support and limited access to tutor support. 
+- This project fell over the Christmas and New Year period so there was very limited access to Mentor and tutor support. 
 
 ### Project goals:
 
@@ -70,7 +71,7 @@ A site that can only be accessed via login and provides users with the features 
 ![image of landing page](../superheros/src/assets/readme/readme_landingpage.jpg)
 - Styled to give the feel of a government database login
 - user can only login from this screen
-- user of flashing button for added drama
+- use of flashing button for added drama
 
 ### Login in
 ![screen grab of sign in and sign up](../superheros/src/assets/readme/readme_signinup.jpg)
@@ -102,17 +103,22 @@ A site that can only be accessed via login and provides users with the features 
 
 ## UX Design
 ### Working within the limitations
-Due to how the course has been structured I had two weeks to create a project that met the Code Institute pass requirements for this module. This was two weeks over the Christmas and New Year period. So I knew I needed to created something realistically achievable within these hard timeline limitations. 
+Due to how the course has been structured I had two weeks to create a project that met the Code Institute pass requirements for this module. This was two weeks over the Christmas and New Year period. This shaped my thinking from the beginning, I needed to keep my goals and ambitions realistic or risk not having a project to submit on the deadline date.
 
-I had not worked with React before and had limited knowledge of creating an Django API that linked to a React repository. Time would need to be allocated to ensure this basic function, of the backend talking to the frontend, worked well.
+I had not worked with React before and had limited knowledge of creating a Django API that linked to a React repository. Time would need to be allocated to ensure this basic function, of the backend talking to the frontend, worked well.
 
-This formed the hard-lines around my thinking in the UX Design process. This needed to be a simple site with a strong design and basic functionality. A project that could be expanded on in the future so that the site could develop into a strong portfolio project. 
+I knew that Bootstrap would be useful as a framework for styling this project, but I did not want to lean it's default styling too much. My thoughts were to utilize Bootstrap for flex styling and add custom CSS for the general styling of the site.
+
+The information above formed the hard-lines around my thinking going into the UX Design process. This needed to be a simple site with a strong design and basic functionality. A project that could be expanded on in the future so that the site could develop into a strong portfolio project. 
 
 ### Why SuperHeros?
 I knew it was going to be a basic post, comments and profile react website, but I did not want to create a generic social media site. This theme enabled me to show a different design style from my pervious portfolio projects.
 
+
 ### Research
 Looking at the style of classic superhero comics I saw that they had a lot of energy. Through the fonts and the language a strong and positive emotion is projected to the readers. 
+
+![project brainstorm](../superheros/src/assets/readme/readme_brainstorm.jpg)
 
 ### Mock ups
 In Adobe XD I created some wire frames and explored the functionality of the website. I planned out the site in detail and also planned the CSS containers and fonts. This planning really saved me time during the main production stage of the project as I was able to focus on the functional coding and not be distracted by responsive design and styling problems/ challenges.
@@ -136,10 +142,35 @@ In Adobe XD I created some wire frames and explored the functionality of the web
 |[font-family: collector-comic, sans-serif;](https://github.com/andrewcargill/superheros/blob/23969f79fd8e7012b0bf0574c454119024858f7b/src/App.module.css#L15)|Headlines and captions. This font replicates the fonts used in comic books. It is fun and dramatic with a sense of movement and energy|
 |[font-family: courier-std, monospace;](https://github.com/andrewcargill/superheros/blob/23969f79fd8e7012b0bf0574c454119024858f7b/src/App.module.css#L35)|Terminal: Used on the landing page and powers edit view. This is the cold voice of 'authority' |
 
+
+
 ### Tables and Databases
 ![wire frames](../superheros/src/assets/readme/readme_models.jpg)
 
-Profiles and Powers are automatically created when a new user is added. The comments model links to the posts model. 
+- Profiles and Powers are automatically created when a new user is added. 
+- The comments model links to the posts model. 
+
+### Project Goals
+
+|Ref No.|Goal|Description|
+|---|---|---|
+|1|Log in/log out/Sign up | User can create an account and login or log out|
+|2|Posts page styled with SuperHero theme | A responsive homepage with post CRUD functionality|
+|3|Comments | Comments for each post with CRUD functionality|
+|4|Profiles (Created on new account) | Profiles with full CRUD Functionality |
+|5|Powers (Created on new account) | Powers for each User with full CRUD Functionality |
+|6| Powers search and rating | Powers can be searched via a drop down menu |
+|7| Site styled in strong comic-book styling | A design theme that runs consistently across the site |
+|8| Front-end react website and custom built API| Hosted on Heroku |
+|9| Deployment of final website to Heroku | Upon project completion | 
+|10| Document all known bugs and issues | Ensure documentation is clear and honest |
+
+
+
+---
+
+## Development
+
 
 ### Diagrams to implementation 
 This is how the planned site evolved into the developed site.
@@ -154,9 +185,6 @@ Time was on my mind throughout the sites development, with design and functional
 |Creating a post|Implemented as planned||
 |General styling|This was followed but evolved through development| I would have liked to have replicated the exact design in the mockups for all components|
 
----
-
-## Development
 ### Reuse of components
 - The navigation is used throughout the site along with the post, comment, profile and powers components. 
 - Loading spinners are imported as a centralized component
@@ -444,29 +472,44 @@ Backend Manual Testing
 
 - #### IMAGE UPLOAD BUG
     - I spent a lot of time researching this bug. It appears that either Cloudinary or the API prefers .jpg files over .png! After much testing it appears that .jpg files are stable and I cannot get any crashing while using this files format. 
+- #### SITE SECURITY
+    - Although an un-logged in visitor cannot edit, delete or create anything on the site they can currently access pages on the site with using direct URL addresses. This is obviously something that will be addressed before the site is released to the wider public. 
 
 
 ---
 
 ## Deployment
+
+Requirements: 
+- Cloudinary or similar
+- ElephantSQL or similar
+- Heroku or similar
+
 This site is deployed via two Heroku apps. One for the API and the other for the front end React site. Getting the two connected can take some time, but below are some guidelines to get you started. 
 
-Should you require any help please email me: andycargill01@aol.com
+You will need to set up a Cloudinary account, which will store all of the images for the site
+
+To store the databases will need to create an ElephantSQL account.
+
+The tips below will help you get started, but this will require some prior knowledge in working with React, Databases and API's. I have not covered how to set up a development version of the site and should you require any help setting up this site please do email me and I will be happy to help: andycargill01@aol.com
 
 ### API
-You will need a Cloudinary account and Heroku account
- - Create a new app in Heroku
+ - Create a new app in Heroku named 'superhero-api'
  - Within 'Config Var': 
-    - Add the link to Cloudinary
-    - Add the address to your Heroku live app 
-    - Deploy from the github repository
+    - Add: ALLOWED_HOST (Add the URL address of the superhero-api)
+    - Add: CLIENT_ORIGIN (add the address of the 'front end' Heroku URL)
+    - Add: CLOUDINARY_URL (Add the address to your Cloudinary repository)
+    - Add: DATABASE_URL (Add the address to your ElephantSQL respository)
+    - Add: DISABLE_COLLECTSTATIC and the value of '1'
+    - Add: SECRET_KEY and set a secret key value
+
+    - Deploy [this repository](https://github.com/andrewcargill/api-superheros) to the 'superhero-api' Heroku app.
 
 ### Front End
 You will need a Heroku account 
-- Create a new app in Heroku
-- Within 'Config Var': 
-    - Link to the API
-    - Link to ..... 
+- Create a new app in Heroku called 'hero-chat'
+- Open a copy of this repository and in the file 'src/api/axiosDefaults.js' update the axios.defaults.baseURL to the URL of the deployed API above. 
+- Deploy the repository to the created 'hero-chat' Heroku app.
 
 
 ----
