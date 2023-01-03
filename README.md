@@ -146,6 +146,7 @@ In Adobe XD I created some wire frames and explored the functionality of the web
 
 ### Tables and Databases
 ![wire frames](../superheros/src/assets/readme/readme_models.jpg)
+![wire frames](../superheros/src/assets/readme/readme_planning.jpg)
 
 - Profiles and Powers are automatically created when a new user is added. 
 - The comments model links to the posts model. 
@@ -506,7 +507,7 @@ The tips below will help you get started, but this will require some prior knowl
     - Deploy [this repository](https://github.com/andrewcargill/api-superheros) to the 'superhero-api' Heroku app.
 
 ### Front End
-You will need a Heroku account 
+
 - Create a new app in Heroku called 'hero-chat'
 - Open a copy of this repository and in the file 'src/api/axiosDefaults.js' update the axios.defaults.baseURL to the URL of the deployed API above. 
 - Deploy the repository to the created 'hero-chat' Heroku app.
