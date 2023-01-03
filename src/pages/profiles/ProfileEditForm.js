@@ -30,7 +30,7 @@ function ProfileEditForm() {
   useEffect(() => {
     const handleMount = async () => {
       try {
-        const { data } = await axiosReq.get(`/posts/${id}/`);
+        const { data } = await axiosReq.get(`/profiles/${id}/`);
         const { image, bio, is_owner } = data;
 
         is_owner ? setPostData({ image, bio }) : history.push("/");
