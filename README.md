@@ -465,8 +465,7 @@ Backend Manual Testing
 - #### POST EDIT BUG
     - Sometimes the post edit button takes you back to the home page. I think this could be something connected to the user tokens.
 - #### PROFILE EDIT BUG
-    - The edit window shows the default image instead of existing image. I think this is a fault in the code and with a little more time I would compare the 'edit post' code against the 'profile edit' code and see what track down the problem. 
-    - The edit view does not load the existing 'bio' text. Again, this could be solved rather easily with a little more time spent on the project. 
+    - The edit window shows the default image instead of existing image. I think this is a fault in the code and with a little more time I would compare the 'edit post' code against the 'profile edit' code and see what track down the problem.  
     - Sometimes when going to edit the profile you are returned to Post view. This is a bug I have not been able to track down at the time of submission. 
 - #### USER LOGGED OUT AFTER A SHORT TIME
     - This is connected to the user tokens. I believe they are running out and not getting renewed.
@@ -474,7 +473,7 @@ Backend Manual Testing
 - #### IMAGE UPLOAD BUG
     - I spent a lot of time researching this bug. It appears that either Cloudinary or the API prefers .jpg files over .png! After much testing it appears that .jpg files are stable and I cannot get any crashing while using this files format. 
 - #### SITE SECURITY
-    - Although an un-logged in visitor cannot edit, delete or create anything on the site they can currently access pages on the site with using direct URL addresses. This is obviously something that will be addressed before the site is released to the wider public. 
+    - Although an un-logged in visitor cannot edit, delete or create anything on the site they can currently access pages on the site using direct URL addresses. This is obviously something that will be addressed before the site is released to the wider public. 
 
 
 ---
